@@ -42,6 +42,9 @@ format:
           };
         </script>
 
+# Quarto formatting options
+callout-icon: false
+
 # Python Configuration
 jupyter: .venv/bin/python3 # Uses your active system python or venv
 

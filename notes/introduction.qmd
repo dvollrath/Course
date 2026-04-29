@@ -12,13 +12,17 @@ $$
 
 In per-capita terms, where $y = Y/AL$ and $k = K/AL$, the production function simplifies to:
 
+::: {#nte-production .callout-note title="Production"}
+Production of GDP per capita is determined as follows:
 $$
 y = f(k) = k^\alpha
 $$
 
+:::
+
 ## Simulating the Production Function
 
-Below is a simple Python snippet to visualize how output $y$ responds to changes in capital intensity $k$ for different values of the capital share $\alpha$.
+Below is a simple Python snippet to visualize how output $y$ responds to changes in capital intensity $k$ for different values of the capital share $\alpha$. It uses the production function in @nte-production
 
 ```{python}
 #| label: fig-production-function
