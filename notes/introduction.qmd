@@ -51,3 +51,32 @@ plt.legend()
 plt.grid(True, alpha=0.3)
 plt.show()
 ```
+
+## Live extension
+Here's an example
+
+Adjust the savings rate $s$ or $alpha$ to see the transition to the new steady state.
+
+```{python}
+#| edit: true
+#| label: fig-capital-growth
+import matplotlib.pyplot as plt
+import numpy as np
+
+s = 0.2
+delta = 0.1
+n = 0.02
+alpha = .3
+k_values = np.linspace(0, 5, 100)
+gK = s*(1/k_values)**(1/(1-alpha)) - delta
+plt.figure(figsize=(8, 5))
+plt.plot(k_values, gK, label=rf"Growth rate of capital")
+
+plt.title("Capital growth")
+plt.xlabel("Capital per effective worker ($K/AL$)")
+plt.ylabel("Growth rate of capital ($g_K$)")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+```

@@ -12,6 +12,9 @@ website:
       - text: "Introduction"
         href: notes/introduction.qmd
 
+filters:
+  - shinylive
+
 format:
   html:
     theme: 
@@ -30,6 +33,7 @@ format:
       body-width: 900px      # The center column for text/math
       margin-width: 200px    # The right sidebar for footnotes/TOC
       sidebar-width: 250px   # The left navigation sidebar
+      gutter-width: 30px     # gap between sections
 
     # Math configuration
     html-math-method: mathjax
