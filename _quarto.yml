@@ -26,6 +26,10 @@ format:
     callout-icon: false
     reference-location: margin
     citation-location: margin
+    grid:
+      body-width: 900px      # The center column for text/math
+      margin-width: 200px    # The right sidebar for footnotes/TOC
+      sidebar-width: 250px   # The left navigation sidebar
 
     # Math configuration
     html-math-method: mathjax

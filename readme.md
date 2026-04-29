@@ -1,4 +1,7 @@
-# Macroeconomic Theory Course Materials
+---
+title: Macroeconomic Theory I
+---
+
 This repository hosts the quarto docs, code, etc. for my Econ 7343 course, Ph.D. level material on macroeconomic theory. 
 
 ## Notes

@@ -32,29 +32,29 @@
   {
     "objectID": "readme.html",
     "href": "readme.html",
-    "title": "1 Macroeconomic Theory Course Materials",
+    "title": "Macroeconomic Theory I",
     "section": "",
-    "text": "This repository hosts the quarto docs, code, etc. for my Econ 7343 course, Ph.D. level material on macroeconomic theory.\n\n\nThese are the material\n\n\n\nPages contain code to run, and/or data you can manipulate\n\n\n\nThere are links throughout to deeper materials. You can work through the course at the highest level first, and then see more about underlying assumptions and how/if they impact the conclusions."
+    "text": "This repository hosts the quarto docs, code, etc. for my Econ 7343 course, Ph.D. level material on macroeconomic theory."
   },
   {
     "objectID": "readme.html#notes",
     "href": "readme.html#notes",
-    "title": "1 Macroeconomic Theory Course Materials",
-    "section": "",
-    "text": "These are the material"
+    "title": "Macroeconomic Theory I",
+    "section": "1 Notes",
+    "text": "1 Notes\nThese are the material"
   },
   {
     "objectID": "readme.html#code",
     "href": "readme.html#code",
-    "title": "1 Macroeconomic Theory Course Materials",
-    "section": "",
-    "text": "Pages contain code to run, and/or data you can manipulate"
+    "title": "Macroeconomic Theory I",
+    "section": "2 Code",
+    "text": "2 Code\nPages contain code to run, and/or data you can manipulate"
   },
   {
     "objectID": "readme.html#supplemental",
     "href": "readme.html#supplemental",
-    "title": "1 Macroeconomic Theory Course Materials",
-    "section": "",
-    "text": "There are links throughout to deeper materials. You can work through the course at the highest level first, and then see more about underlying assumptions and how/if they impact the conclusions."
+    "title": "Macroeconomic Theory I",
+    "section": "3 Supplemental",
+    "text": "3 Supplemental\nThere are links throughout to deeper materials. You can work through the course at the highest level first, and then see more about underlying assumptions and how/if they impact the conclusions."
   }
 ]
