@@ -4,7 +4,7 @@ title: "Introduction"
 
 ## Model Intuition
 
-The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale. We represent total output $Y$ as a function of capital $K$, labor $L$, and the level of technology $A$:
+The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.^[We can work with decreasing returns. Increasing returns are hard.] We represent total output $Y$ as a function of capital $K$, labor $L$, and the level of technology $A$:
 
 $$
 Y = F(K, AL) = K^\alpha (AL)^{1-\alpha}

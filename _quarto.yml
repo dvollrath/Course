@@ -23,7 +23,10 @@ format:
     code-copy: true          # Adds a copy button to code blocks
     toc: true                # Table of contents on the right
     number-sections: true
-    
+    callout-icon: false
+    reference-location: margin
+    citation-location: margin
+
     # Math configuration
     html-math-method: mathjax
     include-in-header: 
@@ -43,7 +46,6 @@ format:
         </script>
 
 # Quarto formatting options
-callout-icon: false
 
 # Python Configuration
 jupyter: .venv/bin/python3 # Uses your active system python or venv
