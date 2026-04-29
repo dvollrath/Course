@@ -1,0 +1,12 @@
+{
+  "hash": "8e61311b94c69b493f67b2efeaca7178",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Introduction\"\n---\n\n## Model Intuition\n\nThe core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale. We represent total output $Y$ as a function of capital $K$, labor $L$, and the level of technology $A$:\n\n$$\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n$$\n\nIn per-capita terms, where $y = Y/AL$ and $k = K/AL$, the production function simplifies to:\n\n$$\ny = f(k) = k^\\alpha\n$$\n\n## Simulating the Production Function\n\nBelow is a simple Python snippet to visualize how output $y$ responds to changes in capital intensity $k$ for different values of the capital share $\\alpha$.\n\n::: {#cell-fig-production-function .cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define the production function\ndef production_function(k, alpha):\n    return k**alpha\n\n# Parameters\nk_values = np.linspace(0, 5, 100)\nalphas = [0.3, 0.5, 0.7]\n\n# Plotting\nplt.figure(figsize=(8, 5))\nfor a in alphas:\n    plt.plot(k_values, production_function(k_values, a), label=rf\"$\\alpha = {a}$\")\n\nplt.title(\"Diminishing Marginal Returns to Capital\")\nplt.xlabel(\"Capital per effective worker ($k$)\")\nplt.ylabel(\"Output per effective worker ($y$)\")\nplt.legend()\nplt.grid(True, alpha=0.3)\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![Output per effective worker as a function of capital intensity.](introduction_files/figure-html/fig-production-function-output-1.png){#fig-production-function width=665 height=451}\n:::\n:::\n\n\n",
+    "supporting": [
+      "introduction_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

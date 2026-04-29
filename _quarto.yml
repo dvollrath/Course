@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: docs  # Renders to /docs for easy GitHub Pages hosting
+
+website:
+  title: "Macroeconomic Theory"
+  description: "Course materials"
+  repo-url: https://github.com/dvollrath/your-repo
+  sidebar:
+    style: "docked"
+    contents:
+      - text: "Introduction"
+        href: notes/introduction.qmd
+
+format:
+  html:
+    theme: 
+      light: spacelab
+      dark: darkly
+    fontsize: 1.1em
+    code-fold: true          # Hides code by default, but students can click to see it
+    code-summary: "Show the code"
+    code-copy: true          # Adds a copy button to code blocks
+    toc: true                # Table of contents on the right
+    number-sections: true
+    
+    # Math configuration
+    html-math-method: mathjax
+    include-in-header: 
+      text: |
+        <script>
+          window.MathJax = {
+            tex: {
+              tags: 'ams',
+              macros: {
+                // Define your global LaTeX macros here
+                RR: "{\\mathbb{R}}",
+                bold: ["{\\mathbf{#1}}", 1],
+                E: "{\\mathbb{E}}"
+              }
+            }
+          };
+        </script>
+
+# Python Configuration
+jupyter: .venv/bin/python3 # Uses your active system python or venv
+
+# R Configuration (if using knitr)
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: "#>"
+
+# Execution options
+execute:
+  freeze: auto  # Only re-renders files that have changed (saves time)
