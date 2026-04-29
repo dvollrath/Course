@@ -5,7 +5,7 @@ project:
 website:
   title: "Macroeconomic Theory"
   description: "Course materials"
-  repo-url: https://github.com/dvollrath/your-repo
+  repo-url: https://github.com/dvollrath/Course
   sidebar:
     style: "docked"
     contents:
