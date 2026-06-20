@@ -1,0 +1,19 @@
+---
+title: Macroeconomic Theory I
+---
+
+This repository hosts the quarto docs, code, etc. for my Econ 7343 course, Ph.D. level material on macroeconomic theory. 
+
+## Notes
+These are the material
+
+## Code
+Pages contain code to run, and/or data you can manipulate
+
+## Installation
+The site is created using Quarto. You can use the site as-is. These notes are for me and how I set up the environment to use Quarto to prepare it. 
+
+1. Download the [Quarto CLI](https://quarto.org/docs/get-started/)
+2. Create a virtual environment within the folder "python3 -m venv .venv"
+3. Install [Quarto Live](https://r-wasm.github.io/quarto-live/) using the command line "quarto add r-wasm/quarto-live"
+4. 

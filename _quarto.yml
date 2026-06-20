@@ -6,17 +6,24 @@ website:
   title: "Macroeconomic Theory"
   description: "Course materials"
   repo-url: https://github.com/dvollrath/Course
+  bread-crumbs: true
   sidebar:
-    style: "docked"
-    contents:
-      - text: "Introduction"
-        href: notes/introduction.qmd
+    style: "floating"
+    contents: auto
 
 filters:
-  - shinylive
+  - live
+
+pyodide:
+  packages:
+    - matplotlib
+    - numpy
+    - scipy
+    - pandas
 
 format:
   html:
+    page-layout: full
     theme: 
       light: spacelab
       dark: darkly
@@ -29,11 +36,6 @@ format:
     callout-icon: false
     reference-location: margin
     citation-location: margin
-    grid:
-      body-width: 900px      # The center column for text/math
-      margin-width: 200px    # The right sidebar for footnotes/TOC
-      sidebar-width: 250px   # The left navigation sidebar
-      gutter-width: 30px     # gap between sections
 
     # Math configuration
     html-math-method: mathjax
@@ -53,7 +55,6 @@ format:
           };
         </script>
 
-# Quarto formatting options
 
 # Python Configuration
 jupyter: .venv/bin/python3 # Uses your active system python or venv

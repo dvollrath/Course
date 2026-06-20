@@ -1,4 +1,5 @@
 /.venv/
+/.venv_desktop/
 /.quarto/
 /_site/
 .DS_Store

@@ -4,7 +4,7 @@
     "href": "notes/introduction.html",
     "title": "Introduction",
     "section": "",
-    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]",
+    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]\n\n\nThis is a span that has the class column-margin which places it in the margin without the sidenote mark.",
     "crumbs": [
       "Introduction"
     ]
@@ -14,7 +14,7 @@
     "href": "notes/introduction.html#model-intuition",
     "title": "Introduction",
     "section": "",
-    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]",
+    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]\n\n\nThis is a span that has the class column-margin which places it in the margin without the sidenote mark.",
     "crumbs": [
       "Introduction"
     ]
@@ -23,8 +23,8 @@
     "objectID": "notes/introduction.html#simulating-the-production-function",
     "href": "notes/introduction.html#simulating-the-production-function",
     "title": "Introduction",
-    "section": "2 Simulating the Production Function",
-    "text": "2 Simulating the Production Function\nBelow is a simple Python snippet to visualize how output \\(y\\) responds to changes in capital intensity \\(k\\) for different values of the capital share \\(\\alpha\\). It uses the production function in Note 1\n\n\nShow the code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define the production function\ndef production_function(k, alpha):\n    return k**alpha\n\n# Parameters\nk_values = np.linspace(0, 5, 100)\nalphas = [0.3, 0.5, 0.7]\n\n# Plotting\nplt.figure(figsize=(8, 5))\nfor a in alphas:\n    plt.plot(k_values, production_function(k_values, a), label=rf\"$\\alpha = {a}$\")\n\nplt.title(\"Diminishing Marginal Returns to Capital\")\nplt.xlabel(\"Capital per effective worker ($k$)\")\nplt.ylabel(\"Output per effective worker ($y$)\")\nplt.legend()\nplt.grid(True, alpha=0.3)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: Output per effective worker as a function of capital intensity.",
+    "section": "Simulating the Production Function",
+    "text": "Simulating the Production Function\nBelow is a simple Python snippet to visualize how output \\(y\\) responds to changes in capital intensity \\(k\\) for different values of the capital share \\(\\alpha\\). It uses the production function in Note 1\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define the production function\ndef production_function(k, alpha):\n    return k**alpha\n\n# Parameters\nk_values = np.linspace(0, 5, 100)\nalphas = [0.3, 0.5, 0.7]\n\n# Plotting\nplt.figure(figsize=(8, 5))\nfor a in alphas:\n    plt.plot(k_values, production_function(k_values, a), label=rf\"$\\alpha = {a}$\")\n\nplt.title(\"Diminishing Marginal Returns to Capital\")\nplt.xlabel(\"Capital per effective worker ($k$)\")\nplt.ylabel(\"Output per effective worker ($y$)\")\nplt.legend()\nplt.grid(True, alpha=0.3)\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Output per effective worker as a function of capital intensity.",
     "crumbs": [
       "Introduction"
     ]
@@ -51,10 +51,128 @@
     "text": "2 Code\nPages contain code to run, and/or data you can manipulate"
   },
   {
-    "objectID": "readme.html#supplemental",
-    "href": "readme.html#supplemental",
+    "objectID": "readme.html#installation",
+    "href": "readme.html#installation",
     "title": "Macroeconomic Theory I",
-    "section": "3 Supplemental",
-    "text": "3 Supplemental\nThere are links throughout to deeper materials. You can work through the course at the highest level first, and then see more about underlying assumptions and how/if they impact the conclusions."
+    "section": "3 Installation",
+    "text": "3 Installation\nThe site is created using Quarto. You can use the site as-is. These notes are for me and how I set up the environment to use Quarto to prepare it.\n\nDownload the Quarto CLI\nCreate a virtual environment within the folder\nInstall Quarto Live using the command line “quarto add r-wasm/quarto-live”"
+  },
+  {
+    "objectID": "notes/introduction.html#live-extension",
+    "href": "notes/introduction.html#live-extension",
+    "title": "Introduction",
+    "section": "Live extension",
+    "text": "Live extension\nHere’s an example. Why doesn’t this text show up?\nAdjust the savings rate \\(s\\) or \\(\\alpha\\) to see the transition to the new steady state.\n\n\n\n\n\n\nAnd more stuff",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "production/introduction.html",
+    "href": "production/introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]\n\n\nThis is a span that has the class column-margin which places it in the margin without the sidenote mark.",
+    "crumbs": [
+      "Production",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "production/introduction.html#model-intuition",
+    "href": "production/introduction.html#model-intuition",
+    "title": "Introduction",
+    "section": "",
+    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]\n\n\nThis is a span that has the class column-margin which places it in the margin without the sidenote mark.",
+    "crumbs": [
+      "Production",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "production/introduction.html#simulating-the-production-function",
+    "href": "production/introduction.html#simulating-the-production-function",
+    "title": "Introduction",
+    "section": "Simulating the Production Function",
+    "text": "Simulating the Production Function\nBelow is a simple Python snippet to visualize how output \\(y\\) responds to changes in capital intensity \\(k\\) for different values of the capital share \\(\\alpha\\). It uses the production function in Note 1\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define the production function\ndef production_function(k, alpha):\n    return k**alpha\n\n# Parameters\nk_values = np.linspace(0, 5, 100)\nalphas = [0.3, 0.5, 0.7]\n\n# Plotting\nplt.figure(figsize=(8, 5))\nfor a in alphas:\n    plt.plot(k_values, production_function(k_values, a), label=rf\"$\\alpha = {a}$\")\n\nplt.title(\"Diminishing Marginal Returns to Capital\")\nplt.xlabel(\"Capital per effective worker ($k$)\")\nplt.ylabel(\"Output per effective worker ($y$)\")\nplt.legend()\nplt.grid(True, alpha=0.3)\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Output per effective worker as a function of capital intensity.",
+    "crumbs": [
+      "Production",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "production/introduction.html#live-extension",
+    "href": "production/introduction.html#live-extension",
+    "title": "Introduction",
+    "section": "Live extension",
+    "text": "Live extension\nHere’s an example. Why doesn’t this text show up?\nAdjust the savings rate \\(s\\) or \\(\\alpha\\) to see the transition to the new steady state.\n\n\n\n\n\n\nAnd more stuff",
+    "crumbs": [
+      "Production",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "facts/testing.html",
+    "href": "facts/testing.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]\n\n\nThis is a span that has the class column-margin which places it in the margin without the sidenote mark.",
+    "crumbs": [
+      "Facts",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "facts/testing.html#model-intuition",
+    "href": "facts/testing.html#model-intuition",
+    "title": "Introduction",
+    "section": "",
+    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]\n\n\nThis is a span that has the class column-margin which places it in the margin without the sidenote mark.",
+    "crumbs": [
+      "Facts",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "facts/testing.html#simulating-the-production-function",
+    "href": "facts/testing.html#simulating-the-production-function",
+    "title": "Introduction",
+    "section": "Simulating the Production Function",
+    "text": "Simulating the Production Function\nBelow is a simple Python snippet to visualize how output \\(y\\) responds to changes in capital intensity \\(k\\) for different values of the capital share \\(\\alpha\\). It uses the production function in Note 1\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define the production function\ndef production_function(k, alpha):\n    return k**alpha\n\n# Parameters\nk_values = np.linspace(0, 5, 100)\nalphas = [0.3, 0.5, 0.7]\n\n# Plotting\nplt.figure(figsize=(8, 5))\nfor a in alphas:\n    plt.plot(k_values, production_function(k_values, a), label=rf\"$\\alpha = {a}$\")\n\nplt.title(\"Diminishing Marginal Returns to Capital\")\nplt.xlabel(\"Capital per effective worker ($k$)\")\nplt.ylabel(\"Output per effective worker ($y$)\")\nplt.legend()\nplt.grid(True, alpha=0.3)\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Output per effective worker as a function of capital intensity.",
+    "crumbs": [
+      "Facts",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "facts/testing.html#live-extension",
+    "href": "facts/testing.html#live-extension",
+    "title": "Introduction",
+    "section": "Live extension",
+    "text": "Live extension\nHere’s an example. Why doesn’t this text show up?\nAdjust the savings rate \\(s\\) or \\(\\alpha\\) to see the transition to the new steady state.\n\n\n\n\n\n\nAnd more stuff",
+    "crumbs": [
+      "Facts",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "facts/index.html",
+    "href": "facts/index.html",
+    "title": "Facts",
+    "section": "",
+    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:",
+    "crumbs": [
+      "Facts"
+    ]
+  },
+  {
+    "objectID": "facts/index.html#landing-spot-for-facts",
+    "href": "facts/index.html#landing-spot-for-facts",
+    "title": "Facts",
+    "section": "",
+    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:",
+    "crumbs": [
+      "Facts"
+    ]
   }
 ]

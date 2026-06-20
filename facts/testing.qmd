@@ -1,5 +1,7 @@
 ---
 title: "Introduction"
+format: live-html
+reference-location: margin
 ---
 
 ## Model Intuition
@@ -19,6 +21,8 @@ y = f(k) = k^\alpha
 $$
 
 :::
+
+[This is a span that has the class `column-margin` which places it in the margin without the sidenote mark.]{.column-margin}
 
 ## Simulating the Production Function
 
@@ -53,30 +57,15 @@ plt.show()
 ```
 
 ## Live extension
-Here's an example
+Here's an example. Why doesn't this text show up?
 
-Adjust the savings rate $s$ or $alpha$ to see the transition to the new steady state.
 
-```{python}
-#| edit: true
+Adjust the savings rate $s$ or $\alpha$ to see the transition to the new steady state.
+
+```{pyodide}
 #| label: fig-capital-growth
-import matplotlib.pyplot as plt
-import numpy as np
-
-s = 0.2
-delta = 0.1
-n = 0.02
-alpha = .3
-k_values = np.linspace(0, 5, 100)
-gK = s*(1/k_values)**(1/(1-alpha)) - delta
-plt.figure(figsize=(8, 5))
-plt.plot(k_values, gK, label=rf"Growth rate of capital")
-
-plt.title("Capital growth")
-plt.xlabel("Capital per effective worker ($K/AL$)")
-plt.ylabel("Growth rate of capital ($g_K$)")
-plt.legend()
-plt.grid(True)
-plt.show()
-
+for x in range(5):
+  print(x ** 2)
 ```
+
+And more stuff
