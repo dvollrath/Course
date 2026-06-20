@@ -1,73 +1,5 @@
 [
   {
-    "objectID": "notes/introduction.html",
-    "href": "notes/introduction.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]\n\n\nThis is a span that has the class column-margin which places it in the margin without the sidenote mark.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "notes/introduction.html#model-intuition",
-    "href": "notes/introduction.html#model-intuition",
-    "title": "Introduction",
-    "section": "",
-    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]\n\n\nThis is a span that has the class column-margin which places it in the margin without the sidenote mark.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "notes/introduction.html#simulating-the-production-function",
-    "href": "notes/introduction.html#simulating-the-production-function",
-    "title": "Introduction",
-    "section": "Simulating the Production Function",
-    "text": "Simulating the Production Function\nBelow is a simple Python snippet to visualize how output \\(y\\) responds to changes in capital intensity \\(k\\) for different values of the capital share \\(\\alpha\\). It uses the production function in Note 1\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define the production function\ndef production_function(k, alpha):\n    return k**alpha\n\n# Parameters\nk_values = np.linspace(0, 5, 100)\nalphas = [0.3, 0.5, 0.7]\n\n# Plotting\nplt.figure(figsize=(8, 5))\nfor a in alphas:\n    plt.plot(k_values, production_function(k_values, a), label=rf\"$\\alpha = {a}$\")\n\nplt.title(\"Diminishing Marginal Returns to Capital\")\nplt.xlabel(\"Capital per effective worker ($k$)\")\nplt.ylabel(\"Output per effective worker ($y$)\")\nplt.legend()\nplt.grid(True, alpha=0.3)\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Output per effective worker as a function of capital intensity.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "readme.html",
-    "href": "readme.html",
-    "title": "Macroeconomic Theory I",
-    "section": "",
-    "text": "This repository hosts the quarto docs, code, etc. for my Econ 7343 course, Ph.D. level material on macroeconomic theory."
-  },
-  {
-    "objectID": "readme.html#notes",
-    "href": "readme.html#notes",
-    "title": "Macroeconomic Theory I",
-    "section": "1 Notes",
-    "text": "1 Notes\nThese are the material"
-  },
-  {
-    "objectID": "readme.html#code",
-    "href": "readme.html#code",
-    "title": "Macroeconomic Theory I",
-    "section": "2 Code",
-    "text": "2 Code\nPages contain code to run, and/or data you can manipulate"
-  },
-  {
-    "objectID": "readme.html#installation",
-    "href": "readme.html#installation",
-    "title": "Macroeconomic Theory I",
-    "section": "3 Installation",
-    "text": "3 Installation\nThe site is created using Quarto. You can use the site as-is. These notes are for me and how I set up the environment to use Quarto to prepare it.\n\nDownload the Quarto CLI\nCreate a virtual environment within the folder\nInstall Quarto Live using the command line “quarto add r-wasm/quarto-live”"
-  },
-  {
-    "objectID": "notes/introduction.html#live-extension",
-    "href": "notes/introduction.html#live-extension",
-    "title": "Introduction",
-    "section": "Live extension",
-    "text": "Live extension\nHere’s an example. Why doesn’t this text show up?\nAdjust the savings rate \\(s\\) or \\(\\alpha\\) to see the transition to the new steady state.\n\n\n\n\n\n\nAnd more stuff",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
     "objectID": "production/introduction.html",
     "href": "production/introduction.html",
     "title": "Introduction",
@@ -112,67 +44,51 @@
     ]
   },
   {
-    "objectID": "facts/testing.html",
-    "href": "facts/testing.html",
-    "title": "Introduction",
+    "objectID": "cbo/index.html",
+    "href": "cbo/index.html",
+    "title": "CBO Potential Output",
     "section": "",
-    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]\n\n\nThis is a span that has the class column-margin which places it in the margin without the sidenote mark.",
+    "text": "This is where the explainer on the CBO model is housed.",
     "crumbs": [
-      "Facts",
-      "Introduction"
+      "CBO Potential Output"
     ]
   },
   {
-    "objectID": "facts/testing.html#model-intuition",
-    "href": "facts/testing.html#model-intuition",
-    "title": "Introduction",
+    "objectID": "cbo/index.html#landing-spot-cbo-model",
+    "href": "cbo/index.html#landing-spot-cbo-model",
+    "title": "CBO Potential Output",
     "section": "",
-    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:\n\n\n\n\n\n\nNote 1: Production\n\n\n\nProduction of GDP per capita is determined as follows: \\[\ny = f(k) = k^\\alpha\n\\]\n\n\nThis is a span that has the class column-margin which places it in the margin without the sidenote mark.",
+    "text": "This is where the explainer on the CBO model is housed.",
     "crumbs": [
-      "Facts",
-      "Introduction"
+      "CBO Potential Output"
     ]
   },
   {
-    "objectID": "facts/testing.html#simulating-the-production-function",
-    "href": "facts/testing.html#simulating-the-production-function",
-    "title": "Introduction",
-    "section": "Simulating the Production Function",
-    "text": "Simulating the Production Function\nBelow is a simple Python snippet to visualize how output \\(y\\) responds to changes in capital intensity \\(k\\) for different values of the capital share \\(\\alpha\\). It uses the production function in Note 1\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define the production function\ndef production_function(k, alpha):\n    return k**alpha\n\n# Parameters\nk_values = np.linspace(0, 5, 100)\nalphas = [0.3, 0.5, 0.7]\n\n# Plotting\nplt.figure(figsize=(8, 5))\nfor a in alphas:\n    plt.plot(k_values, production_function(k_values, a), label=rf\"$\\alpha = {a}$\")\n\nplt.title(\"Diminishing Marginal Returns to Capital\")\nplt.xlabel(\"Capital per effective worker ($k$)\")\nplt.ylabel(\"Output per effective worker ($y$)\")\nplt.legend()\nplt.grid(True, alpha=0.3)\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Output per effective worker as a function of capital intensity.",
-    "crumbs": [
-      "Facts",
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "facts/testing.html#live-extension",
-    "href": "facts/testing.html#live-extension",
-    "title": "Introduction",
-    "section": "Live extension",
-    "text": "Live extension\nHere’s an example. Why doesn’t this text show up?\nAdjust the savings rate \\(s\\) or \\(\\alpha\\) to see the transition to the new steady state.\n\n\n\n\n\n\nAnd more stuff",
-    "crumbs": [
-      "Facts",
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "facts/index.html",
-    "href": "facts/index.html",
-    "title": "Facts",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Macroeconomic Theory",
     "section": "",
-    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:",
-    "crumbs": [
-      "Facts"
-    ]
+    "text": "This repository hosts the quarto docs, code, etc. for simulating various macroeconomic models."
   },
   {
-    "objectID": "facts/index.html#landing-spot-for-facts",
-    "href": "facts/index.html#landing-spot-for-facts",
-    "title": "Facts",
-    "section": "",
-    "text": "The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.1 We represent total output \\(Y\\) as a function of capital \\(K\\), labor \\(L\\), and the level of technology \\(A\\):\n1 We can work with decreasing returns. Increasing returns are hard.\\[\nY = F(K, AL) = K^\\alpha (AL)^{1-\\alpha}\n\\]\nIn per-capita terms, where \\(y = Y/AL\\) and \\(k = K/AL\\), the production function simplifies to:",
-    "crumbs": [
-      "Facts"
-    ]
+    "objectID": "index.html#notes",
+    "href": "index.html#notes",
+    "title": "Macroeconomic Theory",
+    "section": "1 Notes",
+    "text": "1 Notes\nThese are for material explaining the models and how they work."
+  },
+  {
+    "objectID": "index.html#code",
+    "href": "index.html#code",
+    "title": "Macroeconomic Theory",
+    "section": "2 Code",
+    "text": "2 Code\nPages contain code to run, and/or data you can manipulate."
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "Macroeconomic Theory",
+    "section": "3 Installation",
+    "text": "3 Installation\nThe site is created using Quarto. You can use the site as-is. These notes are for me and how I set up the environment to use Quarto to prepare it.\n\nDownload the Quarto CLI\nCreate a virtual environment within the folder “python3 -m venv .venv”\nInstall Quarto Live using the command line “quarto add r-wasm/quarto-live”"
   }
 ]
