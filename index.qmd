@@ -1,14 +1,14 @@
 ---
-title: Macroeconomic Theory I
+title: Macroeconomic Theory
 ---
 
-This repository hosts the quarto docs, code, etc. for my Econ 7343 course, Ph.D. level material on macroeconomic theory. 
+This repository hosts the quarto docs, code, etc. for simulating various macroeconomic models.
 
 ## Notes
-These are the material
+These are for material explaining the models and how they work.
 
 ## Code
-Pages contain code to run, and/or data you can manipulate
+Pages contain code to run, and/or data you can manipulate.
 
 ## Installation
 The site is created using Quarto. You can use the site as-is. These notes are for me and how I set up the environment to use Quarto to prepare it. 

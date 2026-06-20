@@ -1,0 +1,9 @@
+---
+title: "CBO Potential Output"
+format: live-html
+reference-location: margin
+---
+
+## Landing spot CBO model
+
+This is where the explainer on the CBO model is housed. 
