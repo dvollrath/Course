@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Macroeconomic Theory</title>
+<title>Putting It Together: From Ingredients to Potential GDP – Macroeconomic Theory</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -151,7 +151,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../production/introduction.html">Production</a></li><li class="breadcrumb-item"><a href="../production/introduction.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/aggregation.html">Putting It Together: From Ingredients to Potential GDP</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -217,7 +217,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../cbo/aggregation.html" class="sidebar-item-text sidebar-link">
+  <a href="../cbo/aggregation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Putting It Together: From Ingredients to Potential GDP</span></a>
   </div>
 </li>
@@ -246,7 +246,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../production/introduction.html" class="sidebar-item-text sidebar-link active">
+  <a href="../production/introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -263,9 +263,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../production/introduction.html">Production</a></li><li class="breadcrumb-item"><a href="../production/introduction.html">Introduction</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/aggregation.html">Putting It Together: From Ingredients to Potential GDP</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Putting It Together: From Ingredients to Potential GDP</h1>
 </div>
 
 
@@ -282,90 +282,117 @@ window.Quarto = {
 </header>
 
 
-<section id="model-intuition" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="model-intuition">Model Intuition</h2>
-<p>The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> We represent total output <span class="math inline">\(Y\)</span> as a function of capital <span class="math inline">\(K\)</span>, labor <span class="math inline">\(L\)</span>, and the level of technology <span class="math inline">\(A\)</span>:</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;We can work with decreasing returns. Increasing returns are hard.</p></div></div><p><span class="math display">\[
-Y = F(K, AL) = K^\alpha (AL)^{1-\alpha}
-\]</span></p>
-<p>In per-capita terms, where <span class="math inline">\(y = Y/AL\)</span> and <span class="math inline">\(k = K/AL\)</span>, the production function simplifies to:</p>
-<div id="nte-production" class="callout callout-style-default callout-note callout-titled" title="Production">
+<section id="from-parts-to-a-whole" class="level2">
+<h2 class="anchored" data-anchor-id="from-parts-to-a-whole">From parts to a whole</h2>
+<p>For the last few pages we have been building ingredients. We measured how many hours people can sustainably work (labor), how hard the economy’s machines and buildings are working (capital services), and the leftover know-how that lets the same workers and machines produce more over time (total factor productivity, or TFP). Each one was its own number, sitting in its own file.</p>
+<p>Now we cook. This page is where the ingredients go into the pot and come out as a single dish: <strong>potential GDP</strong>, the dollar value of everything the economy <em>could</em> produce at full, sustainable use of its workers and machines.</p>
+<p>Think of it like a recipe. We have flour, eggs, and sugar measured out. The recipe tells us how to combine them, and the oven turns them into a cake. Our “recipe” is the production function, and our final cake is one number per year for the whole U.S. economy.</p>
+</section>
+<section id="the-engine-one-more-time" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-engine-one-more-time">The engine, one more time</h2>
+<p>The biggest chunk of the economy (about three-quarters of it) is the <strong>nonfarm business</strong> sector.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> This is the part that runs on the full engine you met a few pages back. We plug in three things (potential labor, potential capital, and potential TFP) and the engine hands us potential output for that sector.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Nonfarm business, or NFB, is basically every private company that isn’t a farm: factories, stores, banks, software firms, restaurants. It is where most of the action is.</p></div></div><p>That engine has a name, the <strong>Cobb-Douglas production function</strong>, and it looks like this:</p>
+<div id="nte-cobb-douglas" class="callout callout-style-default callout-note callout-titled" title="The production function (the engine)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note&nbsp;1: Production
+Note&nbsp;1: The production function (the engine)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Production of GDP per capita is determined as follows: <span class="math display">\[
-y = f(k) = k^\alpha
-\]</span></p>
+<p>Potential nonfarm-business output is the technology level <span class="math inline">\(A\)</span> times capital <span class="math inline">\(K\)</span> and labor <span class="math inline">\(L\)</span>, each raised to a power that reflects how big a role it plays: <span class="math display">\[
+Y = A \, K^{\alpha} \, L^{1-\alpha}
+\]</span> Here <span class="math inline">\(\alpha\)</span> (about <span class="math inline">\(0.36\)</span> in the U.S.) is capital’s share of income, so <span class="math inline">\(1-\alpha\)</span> (about <span class="math inline">\(0.64\)</span>) is labor’s share. The two powers add up to one, which is just a way of saying “if you double <em>both</em> workers and machines, you double output.”</p>
 </div>
 </div>
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">This is a span that has the class <code>column-margin</code> which places it in the margin without the sidenote mark.</span></div></div>
+<p>In the code, this same equation is written in <strong>logarithms</strong>, a trick that turns the multiplications and powers into plain additions, which computers and statisticians both prefer.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Here is the actual line, copied from <code>aggregation.py</code>:</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;A logarithm answers “how many times do I multiply to get this number?” Working in logs turns “<span class="math inline">\(A\)</span> times <span class="math inline">\(K^\alpha\)</span> times <span class="math inline">\(L^{1-\alpha}\)</span>” into “log A plus alpha times log K plus…”: addition instead of multiplication. At the end we undo the log with <span class="math inline">\(e^x\)</span> (<code>np.exp</code>) to get back to dollars.</p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>log_qgdpnfbfe <span class="op">=</span> (</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    kshare <span class="op">*</span> np.log(icap_lag)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> kshare) <span class="op">*</span> np.log(ilabfe)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> np.log(annual_potentials[<span class="st">"iprodfe"</span>])</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> gdpconst</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>qgdpnfbfe <span class="op">=</span> np.exp(log_qgdpnfbfe).rename(<span class="st">"qgdpnfbfe"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Read it in plain English: take capital’s share (<code>kshare</code>, that is <span class="math inline">\(\alpha\)</span>) times log capital (<code>icap_lag</code>), add labor’s share (<code>1 - kshare</code>) times log labor (<code>ilabfe</code>), add log TFP (<code>iprodfe</code>), add a constant that just fixes the units, and undo the log. Out pops <code>qgdpnfbfe</code>, potential nonfarm-business output. The <code>fe</code> on the end is the model’s tag for “full employment,” its shorthand for <em>potential</em>.</p>
 </section>
-<section id="simulating-the-production-function" class="level2">
-<h2 class="anchored" data-anchor-id="simulating-the-production-function">Simulating the Production Function</h2>
-<p>Below is a simple Python snippet to visualize how output <span class="math inline">\(y\)</span> responds to changes in capital intensity <span class="math inline">\(k\)</span> for different values of the capital share <span class="math inline">\(\alpha\)</span>. It uses the production function in <a href="#nte-production" class="quarto-xref">Note&nbsp;1</a></p>
-<div id="cell-fig-production-function" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the production function</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> production_function(k, alpha):</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> k<span class="op">**</span>alpha</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>k_values <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>alphas <span class="op">=</span> [<span class="fl">0.3</span>, <span class="fl">0.5</span>, <span class="fl">0.7</span>]</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a <span class="kw">in</span> alphas:</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    plt.plot(k_values, production_function(k_values, a), label<span class="op">=</span><span class="vs">rf"</span><span class="dv">$</span><span class="ch">\a</span><span class="vs">lpha = </span><span class="sc">{</span>a<span class="sc">}</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Diminishing Marginal Returns to Capital"</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Capital per effective worker ($k$)"</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Output per effective worker ($y$)"</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div id="fig-production-function" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-production-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="introduction_files/figure-html/fig-production-function-output-1.png" width="665" height="451" class="figure-img">
+<section id="the-other-sectors-take-a-simpler-path" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-other-sectors-take-a-simpler-path">The other sectors take a simpler path</h2>
+<p>The rest of the economy (the other quarter) does not get the full engine. There are four leftover pieces: <strong>farms</strong>, <strong>households</strong> (which here mostly means the value of living in a home you own), <strong>nonprofits</strong>, and <strong>government</strong> (federal and state-and-local).</p>
+<p>For most of these, potential output is computed the simple way: potential hours times potential productivity.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> No capital, no TFP, no powers, just how many hours people work and how much each hour produces.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Productivity here just means “output per hour of work.” If a worker can produce 50 dollars of stuff per hour and works a billion hours, that’s 50 billion dollars of output. Hours times productivity.</p></div></div><p>Housing is the one exception, and it is a fun one. You do not “work hours” to live in your own house. The house itself does the producing, like a tool you own rather than rent. So for housing the model uses the <em>return on the housing stock</em>: the value the home throws off each year, scaled by how much housing there is. It is the one place in the whole model where capital, not labor, is doing the work.</p>
+</section>
+<section id="aggregation-why-you-cant-just-add-dollars" class="level2">
+<h2 class="anchored" data-anchor-id="aggregation-why-you-cant-just-add-dollars">Aggregation: why you can’t just add dollars</h2>
+<p>Now we have a number for each sector. The obvious move is to add them up. <strong>Aggregation</strong> is exactly that: combining the sectors into one economy-wide total.</p>
+<p>But here is the catch, and it is the heart of this page. You cannot simply add up “real” dollars across sectors. <strong>Real</strong> means inflation-adjusted: dollars stripped of price changes so you are measuring actual <em>stuff</em>, not just bigger price tags. The trouble is that different sectors have wildly different price trends. Computers get cheaper every year; haircuts and houses get more expensive. So a “2009 dollar” of computers and a “2009 dollar” of haircuts are not really the same kind of dollar, and naively summing them gives a misleading total.</p>
+<p>So how do the official statisticians handle it? With something called the <strong>Fisher index</strong>.</p>
+</section>
+<section id="the-fisher-index-a-fair-average" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-fisher-index-a-fair-average">The Fisher index: a fair average</h2>
+<p>Imagine you want to combine fast-growing computer output with slow-growing food output into one “total output” number. You need to weight them by price, but <em>which year’s prices</em>?</p>
+<p>If you weight by <strong>old prices</strong> (computers were absurdly expensive back then), computers dominate the weights and their fast growth gets <em>overstated</em>. Statisticians call this the <strong>Laspeyres</strong> way.</p>
+<p>If you weight by <strong>new prices</strong> (computers are cheap now), computers barely count and their growth gets <em>understated</em>. That is the <strong>Paasche</strong> way.</p>
+<p>Both are reasonable. Both are biased, in opposite directions. So the Fisher index does the obvious fair thing: it splits the difference by taking the <strong>geometric mean</strong> of the two.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> One estimate leans high, the other leans low, and averaging them cancels most of the bias, like asking two people who always over- and under-guess and meeting in the middle.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;A geometric mean is like a regular average, but for things that multiply: you multiply the numbers and take the square root. For growth rates, it is the honest way to average. If one estimate is too high and the other too low, the geometric mean lands sensibly in between and the two biases largely cancel.</p></div></div><div id="nte-fisher" class="callout callout-style-default callout-note callout-titled" title="The Fisher index">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-production-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Output per effective worker as a function of capital intensity.
+<div class="callout-title-container flex-fill">
+Note&nbsp;2: The Fisher index
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Fisher growth rate is the geometric mean (the square root of the product) of the Laspeyres and Paasche growth rates: <span class="math display">\[
+\text{Fisher} = \sqrt{\text{Laspeyres} \times \text{Paasche}}
+\]</span> This is the exact method the <strong>BEA</strong> (the Bureau of Economic Analysis, the government agency that measures official GDP) uses to add up the national accounts. CBO uses it too, so its potential GDP is an apples-to-apples match with the BEA’s actual GDP.</p>
+</div>
+</div>
+<p>In the code, that “fair average” is literally a square root. Here it is, verbatim from <code>fisher.py</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Step 3: Fisher indices ──</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Fisher = geometric mean of Laspeyres and Paasche</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>fisher_q <span class="op">=</span> np.sqrt(laspeyres_q_gross <span class="op">*</span> paasche_q)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>fisher_p <span class="op">=</span> np.sqrt(laspeyres_p_gross <span class="op">*</span> paasche_p)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="the-payoff-picture" class="level2">
+<h2 class="anchored" data-anchor-id="the-payoff-picture">The payoff picture</h2>
+<p>Before we write down the final total, let’s look at what all this machinery actually buys us. <a href="#fig-contrib" class="quarto-xref">Figure&nbsp;1</a> breaks potential nonfarm-business growth into its three ingredients (labor, capital, and TFP) and shows how much each one added in different eras. This is the picture that ties together everything from the last few pages.</p>
+<div id="fig-contrib" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-contrib-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/contributions.png" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-contrib-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: How much each ingredient (labor, capital, and TFP) adds to potential nonfarm-business growth, by era.
 </figcaption>
 </figure>
 </div>
-</div>
-</div>
+<p>Each bar is a stretch of history, and the colored segments stack up to that era’s total potential growth. A few things jump out. In the <strong>Golden Age</strong> (1950-1973) all three ingredients were generous, and TFP alone (the pure “we got smarter” piece) contributed nearly 1.9 percentage points a year. The total potential growth back then was about 4% a year, which is fast.</p>
+<p>Then look at the right-hand bars. After 2007, <em>all three</em> segments shrink at once. Labor growth slows as the workforce ages, capital deepening cools off, and TFP growth drops to under 1 point a year. Stacked together, potential growth falls to roughly 1.65% a year, about two-fifths of the Golden Age pace. The slump isn’t one bad ingredient; it is a little less of everything.</p>
 </section>
-<section id="live-extension" class="level2">
-<h2 class="anchored" data-anchor-id="live-extension">Live extension</h2>
-<p>Here’s an example. Why doesn’t this text show up?</p>
-<p>Adjust the savings rate <span class="math inline">\(s\)</span> or <span class="math inline">\(\alpha\)</span> to see the transition to the new steady state.</p>
-<div>
-<div id="pyodide-1" class="exercise-cell">
+<section id="the-final-total" class="level2">
+<h2 class="anchored" data-anchor-id="the-final-total">The final total</h2>
+<p>With the picture in mind, the last step is short. We take the nonfarm-business output from the engine and add the other sectors. In the code the headline line reads:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gdpfe <span class="op">=</span> (gdpnfbfe <span class="op">+</span> gdpgfe <span class="op">+</span> sectoral_potentials[<span class="st">"gdpaffe"</span>] <span class="op">+</span> gdpsvhfe).rename(<span class="st">"gdpfe"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>That is potential GDP in plain <em>nominal</em> (current-price) dollars: nonfarm business plus government plus farms plus household-and-nonprofit. Adding nominal dollars is fine, because nominal dollars are all in the same year’s prices already.</p>
+<p>For the <em>real</em> (inflation-adjusted) total, we use the Fisher index instead of plain addition. That is the <code>fisher_aggregate_with_residual</code> call below. And then there is one last friendly tweak:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>qgdpfe, pgdpfe <span class="op">=</span> fisher_aggregate_with_residual(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    nominal_all, real_all, price_all,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    residual<span class="op">=</span>smoothed_residuals.get(<span class="st">"qgdp_resfe"</span>),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    sample_start<span class="op">=</span>sample_start, sample_end<span class="op">=</span>sample_end,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Notice the <code>residual=...</code> part. Because Fisher aggregation rebuilds the total from sub-pieces, our sum can land a hair away from the BEA’s official definition of GDP. So the model adds back a tiny, pre-smoothed correction (the <strong>Fisher residual</strong>) so that our potential total lines up exactly with how the official statisticians draw the GDP boundary. It is a small nudge, nothing more, but it is what keeps the model honest against the published numbers.</p>
+</section>
+<section id="what-we-have-and-whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-have-and-whats-next">What we have, and what’s next</h2>
+<p>And that’s the dish out of the oven. We now have <code>qgdpfe</code> (one number for each year, real potential GDP in 2009 dollars) assembled from labor, capital, and TFP, glued together the same way the BEA glues actual GDP. We can trace it all the way back through history.</p>
+<p>But every number so far has been <em>historical</em>: what the economy could have produced from 1949 to today. The obvious question is the one a forecaster actually cares about: how does this model say anything about the <strong>future</strong>? That turns out to hinge on a single fork in the road, and it is where we go next.</p>
 
-</div>
-<script type="pyodide-1-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoiZmlnLWNhcGl0YWwtZ3Jvd3RoIn0sImNvZGUiOiJmb3IgeCBpbiByYW5nZSg1KTpcbiAgcHJpbnQoeCAqKiAyKSJ9
-</script>
-</div>
-<p>And more stuff</p>
 
-
-<script type="pyodide-data">
-eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yOC4xL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIiwibWF0cGxvdGxpYiIsIm51bXB5Iiwic2NpcHkiLCJwYW5kYXMiXX19
-</script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
+eyJjb250ZW50cyI6W119
 </script>
 <div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
 <div id="exercise-loading-status" class="d-flex gap-2">
@@ -401,7 +428,7 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../production";
+window._ojs.paths.runtimeToDoc = "../../cbo";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "..";
 window._ojs.selfContained = false;

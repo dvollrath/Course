@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Macroeconomic Theory</title>
+<title>The Production Function: the Economy’s Engine – Macroeconomic Theory</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -151,7 +151,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../production/introduction.html">Production</a></li><li class="breadcrumb-item"><a href="../production/introduction.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/production-function.html">The Production Function: the Economy’s Engine</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -193,7 +193,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../cbo/production-function.html" class="sidebar-item-text sidebar-link">
+  <a href="../cbo/production-function.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">The Production Function: the Economy’s Engine</span></a>
   </div>
 </li>
@@ -246,7 +246,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../production/introduction.html" class="sidebar-item-text sidebar-link active">
+  <a href="../production/introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -263,9 +263,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../production/introduction.html">Production</a></li><li class="breadcrumb-item"><a href="../production/introduction.html">Introduction</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/production-function.html">The Production Function: the Economy’s Engine</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">The Production Function: the Economy’s Engine</h1>
 </div>
 
 
@@ -282,90 +282,120 @@ window.Quarto = {
 </header>
 
 
-<section id="model-intuition" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="model-intuition">Model Intuition</h2>
-<p>The core of the Solow model relies on the Cobb-Douglas production function with constant returns to scale.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> We represent total output <span class="math inline">\(Y\)</span> as a function of capital <span class="math inline">\(K\)</span>, labor <span class="math inline">\(L\)</span>, and the level of technology <span class="math inline">\(A\)</span>:</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;We can work with decreasing returns. Increasing returns are hard.</p></div></div><p><span class="math display">\[
-Y = F(K, AL) = K^\alpha (AL)^{1-\alpha}
-\]</span></p>
-<p>In per-capita terms, where <span class="math inline">\(y = Y/AL\)</span> and <span class="math inline">\(k = K/AL\)</span>, the production function simplifies to:</p>
-<div id="nte-production" class="callout callout-style-default callout-note callout-titled" title="Production">
+<section id="from-a-gap-to-an-engine" class="level2">
+<h2 class="anchored" data-anchor-id="from-a-gap-to-an-engine">From a gap to an engine</h2>
+<p>On the last page we measured the <em>output gap</em>, the difference between what the economy actually produced and what it could have produced at full, sustainable use of its resources. That left a big question hanging: where does the “could have produced” number even come from? You can’t look it up anywhere. Nobody publishes the economy’s top speed.</p>
+<p>So the model has to <em>build</em> it. And to build it, you need a rule that takes the economy’s ingredients and turns them into output. Economists call that rule a <strong>production function</strong>: a recipe that says, “give me this much of each ingredient, and I’ll tell you how much you can make.”</p>
+<p>That recipe is the engine at the heart of this whole model. This page is about how it works.</p>
+</section>
+<section id="output-is-a-dish-the-ingredients-are-labor-capital-and-know-how" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="output-is-a-dish-the-ingredients-are-labor-capital-and-know-how">Output is a dish; the ingredients are labor, capital, and know-how</h2>
+<p>Think about baking bread.</p>
+<p>The loaf that comes out of the oven is your <strong>output</strong>, the thing you actually made. To get it, you needed three kinds of ingredient:</p>
+<ul>
+<li><strong>Labor</strong>: the hours of work people put in. The baker kneading, measuring, watching the oven. In the economy, this is the total hours that workers put in.</li>
+<li><strong>Capital</strong>: the <em>tools and equipment</em> you bake with: the oven, the mixer, the pans, the kitchen itself. In the economy, capital means machines, factories, office buildings, trucks, computers, and software.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li><strong>Know-how</strong>: how good your recipe is. Two bakers with the exact same oven, the same flour, and the same hours can get very different loaves if one has a better technique. Economists call this <strong>total factor productivity</strong>, usually shortened to <strong>TFP</strong>, basically, how cleverly you combine everything else.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Capital is anything durable that helps you produce but isn’t “used up” in one go. A loaf of bread is output; the oven that baked it is capital.</p></div></div><p>The big idea is simple and intuitive: you get more output if you add more of any ingredient <em>or</em> if you improve the recipe. More workers, more ovens, or a smarter technique: any of them lifts how much you make.</p>
+<p>The specific recipe this model uses has a name: the <strong>Cobb-Douglas production function</strong>. It’s the single most-used production function in all of economics, because it captures that “more inputs or better know-how means more output” intuition in one tidy line.</p>
+</section>
+<section id="the-recipe-written-down" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-recipe-written-down">The recipe, written down</h2>
+<p>Here is the actual formula. Don’t worry about the symbols yet. We’ll translate every one of them into plain words right after.</p>
+<div id="nte-prod" class="callout callout-style-default callout-note callout-titled" title="The Cobb-Douglas production function">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note&nbsp;1: Production
+Note&nbsp;1: The Cobb-Douglas production function
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Production of GDP per capita is determined as follows: <span class="math display">\[
-y = f(k) = k^\alpha
-\]</span></p>
+<p>Output is capital and labor, each raised to a power, scaled up by productivity: <span class="math display">\[
+Y = A \cdot K^{\alpha} \cdot L^{1-\alpha}
+\]</span> where <span class="math inline">\(Y\)</span> is output, <span class="math inline">\(K\)</span> is capital, <span class="math inline">\(L\)</span> is labor, <span class="math inline">\(A\)</span> is total factor productivity (the recipe quality), and <span class="math inline">\(\alpha\)</span> is <strong>capital’s share of income</strong>, about <span class="math inline">\(0.36\)</span> in U.S. nonfarm business.</p>
 </div>
 </div>
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">This is a span that has the class <code>column-margin</code> which places it in the margin without the sidenote mark.</span></div></div>
+<p>Reading it left to right:</p>
+<ul>
+<li><span class="math inline">\(Y\)</span> is <strong>output</strong>, the dish. In our case, the output of the <em>nonfarm business sector</em>, which is the part of the economy that isn’t farms or the government, roughly three-quarters of all U.S. production. It’s where this recipe really earns its keep.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li><span class="math inline">\(A\)</span> is <strong>total factor productivity</strong>, the recipe quality. A bigger <span class="math inline">\(A\)</span> means you squeeze more output from the same workers and machines.</li>
+<li><span class="math inline">\(K\)</span> is <strong>capital</strong>, and <span class="math inline">\(L\)</span> is <strong>labor</strong>, the two physical ingredients.</li>
+<li><span class="math inline">\(\alpha\)</span> (the Greek letter “alpha”) is the one piece that needs explaining.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;The model treats the economy as six sectors. Only nonfarm business gets the full Cobb-Douglas recipe; the smaller sectors use simpler rules we’ll meet later.</p></div></div></section>
+<section id="alpha-who-gets-which-slice-of-the-pie" class="level2">
+<h2 class="anchored" data-anchor-id="alpha-who-gets-which-slice-of-the-pie">Alpha: who gets which slice of the pie</h2>
+<p>When a business produces something and sells it, the money it earns gets split. Some of it pays the <em>workers</em>: wages and salaries. The rest goes to the <em>owners of the machines and buildings</em>, the people who put up the capital. That second slice is <strong>capital’s share of income</strong>, and that’s what <span class="math inline">\(\alpha\)</span> measures.</p>
+<p>In U.S. nonfarm business, <span class="math inline">\(\alpha\)</span> is about <span class="math inline">\(0.36\)</span>. In plain terms: out of every dollar the sector earns, roughly 36 cents flows to the owners of capital, and the other 64 cents flows to workers as pay.</p>
+<p>That’s also why the exponents in the formula add up the way they do. Capital is raised to the power <span class="math inline">\(\alpha\)</span> (0.36), and labor is raised to <span class="math inline">\(1 - \alpha\)</span> (0.64). The two exponents are just the two slices of the same pie, so by construction they add to 1.</p>
+<p>Why exponents instead of plain multiplication? Because exponents let each ingredient “matter” in proportion to its slice. Since workers earn the bigger slice, labor moves output a bit more than capital does, dollar for dollar, and the <span class="math inline">\(0.64\)</span> exponent bakes exactly that in.</p>
 </section>
-<section id="simulating-the-production-function" class="level2">
-<h2 class="anchored" data-anchor-id="simulating-the-production-function">Simulating the Production Function</h2>
-<p>Below is a simple Python snippet to visualize how output <span class="math inline">\(y\)</span> responds to changes in capital intensity <span class="math inline">\(k\)</span> for different values of the capital share <span class="math inline">\(\alpha\)</span>. It uses the production function in <a href="#nte-production" class="quarto-xref">Note&nbsp;1</a></p>
-<div id="cell-fig-production-function" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the production function</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> production_function(k, alpha):</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> k<span class="op">**</span>alpha</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>k_values <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>alphas <span class="op">=</span> [<span class="fl">0.3</span>, <span class="fl">0.5</span>, <span class="fl">0.7</span>]</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a <span class="kw">in</span> alphas:</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    plt.plot(k_values, production_function(k_values, a), label<span class="op">=</span><span class="vs">rf"</span><span class="dv">$</span><span class="ch">\a</span><span class="vs">lpha = </span><span class="sc">{</span>a<span class="sc">}</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Diminishing Marginal Returns to Capital"</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Capital per effective worker ($k$)"</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Output per effective worker ($y$)"</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div id="fig-production-function" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="more-machines-help-but-less-and-less-each-time" class="level2">
+<h2 class="anchored" data-anchor-id="more-machines-help-but-less-and-less-each-time">More machines help, but less and less each time</h2>
+<p>Here’s a feature of this recipe that matches real life surprisingly well.</p>
+<p>Imagine you give one office worker a second computer monitor. Nice. They can keep email open on one screen and work on the other. Real productivity boost. Now give them a third monitor. Still helpful, but less so. A fourth? Marginal. By the tenth monitor, they’re just decorating the cubicle. Each additional monitor adds <em>something</em>, but each one adds <em>less</em> than the one before.</p>
+<p>Economists call this <strong>diminishing returns</strong>: piling on more and more of one ingredient (here, capital per worker) keeps raising output, but by smaller and smaller amounts. <a href="#fig-cd" class="quarto-xref">Figure&nbsp;1</a> shows exactly this shape: output climbs as you add capital per worker, but the curve flattens as it rises.</p>
+<div id="fig-cd" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-production-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="introduction_files/figure-html/fig-production-function-output-1.png" width="665" height="451" class="figure-img">
+<div aria-describedby="fig-cd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/cobb_douglas.png" class="img-fluid figure-img" style="width:80.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-production-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Output per effective worker as a function of capital intensity.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: More capital per worker raises output, but with diminishing returns, and a higher capital share (alpha) bends the curve up more.
 </figcaption>
 </figure>
 </div>
-</div>
-</div>
+<p>Notice the curve bends but never turns downward: more capital is never <em>bad</em>, it just helps less and less. And the value of <span class="math inline">\(\alpha\)</span> controls how sharply it bends: a bigger capital share means capital pulls more weight, so the curve rises higher before it flattens.</p>
 </section>
-<section id="live-extension" class="level2">
-<h2 class="anchored" data-anchor-id="live-extension">Live extension</h2>
-<p>Here’s an example. Why doesn’t this text show up?</p>
-<p>Adjust the savings rate <span class="math inline">\(s\)</span> or <span class="math inline">\(\alpha\)</span> to see the transition to the new steady state.</p>
-<div>
-<div id="pyodide-1" class="exercise-cell">
+<section id="double-everything-and-you-double-output" class="level2">
+<h2 class="anchored" data-anchor-id="double-everything-and-you-double-output">Double everything, and you double output</h2>
+<p>One more clean property. Because the two exponents add up to exactly 1, the recipe has what’s called <strong>constant returns to scale</strong>: if you double <em>every</em> ingredient at once (twice the workers, twice the machines, same know-how) you get exactly twice the output.</p>
+<p>That’s the difference between adding capital <em>per worker</em> (diminishing returns, the flattening curve) and scaling the <em>whole operation</em> up evenly (constant returns, output just doubles). Build a second identical bakery next door, fully staffed and equipped, and you bake twice as much bread. Sensible.</p>
+</section>
+<section id="the-three-ingredients-and-what-potential-means" class="level2">
+<h2 class="anchored" data-anchor-id="the-three-ingredients-and-what-potential-means">The three ingredients, and what “potential” means</h2>
+<p>The recipe needs three numbers fed into it, and each one gets its own page coming up:</p>
+<ul>
+<li><strong>Labor</strong>: total worker hours (page 4).</li>
+<li><strong>Capital services</strong>: how much productive muscle the machines and buildings provide (page 5).</li>
+<li><strong>TFP</strong>: the recipe quality, the leftover know-how (page 6).</li>
+</ul>
+<p>But remember the whole point: we’re not building <em>actual</em> output, we already have that. We’re building <strong>potential</strong> output, the economy’s sustainable top speed. So the model feeds the recipe the <em>potential</em> version of each ingredient: potential hours (what people would work at full employment), potential capital, and potential TFP (the underlying trend, with temporary booms and busts smoothed out). Same recipe, ingredients set to “full health.”</p>
+</section>
+<section id="the-recipe-as-the-code-actually-runs-it" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-recipe-as-the-code-actually-runs-it">The recipe, as the code actually runs it</h2>
+<p>Here is the exact block from <code>aggregation.py</code> that computes potential nonfarm-business output:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>kshare <span class="op">=</span> annual[<span class="st">"kshare"</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>log_qgdpnfbfe <span class="op">=</span> (</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    kshare <span class="op">*</span> np.log(icap_lag)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> kshare) <span class="op">*</span> np.log(ilabfe)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> np.log(annual_potentials[<span class="st">"iprodfe"</span>])</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> gdpconst</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>qgdpnfbfe <span class="op">=</span> np.exp(log_qgdpnfbfe).rename(<span class="st">"qgdpnfbfe"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>It looks different from the tidy formula in <a href="#nte-prod" class="quarto-xref">Note&nbsp;1</a>, but it’s the very same recipe, just written in <strong>logarithms</strong>. Here’s why anyone would do that.</p>
+<p>A <strong>logarithm</strong> (or “log”) is a math trick with one magical property: it turns multiplication into addition. The log of “<span class="math inline">\(a\)</span> times <span class="math inline">\(b\)</span>” equals “log of <span class="math inline">\(a\)</span>” plus “log of <span class="math inline">\(b\)</span>.” So a recipe written as a chain of <em>multiplications</em> becomes a chain of simple <em>additions</em>, which is faster and steadier for a computer to handle. It’s like preferring to add up a grocery bill rather than multiply everything together in your head.</p>
+<p>Watch the formula <span class="math inline">\(Y = A \cdot K^{\alpha} \cdot L^{1-\alpha}\)</span> turn into the code, line by line:</p>
+<ul>
+<li><code>kshare</code> is <span class="math inline">\(\alpha\)</span>, capital’s share (0.36).</li>
+<li><code>icap_lag</code> is the capital <span class="math inline">\(K\)</span>, last year’s capital services, since this year’s production runs on machines that were already in place.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
+<li><code>ilabfe</code> is potential labor <span class="math inline">\(L\)</span>, the potential worker-hours.</li>
+<li><code>iprodfe</code> is potential TFP <span class="math inline">\(A\)</span>, the potential recipe quality.</li>
+<li><code>gdpconst</code> is a fixed constant that simply pins down the units, so the index lands on the right scale (2009 dollars).</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;The capital is “lagged” by one year: you produce in 2016 using the factories and equipment that existed at the end of 2015.</p></div></div><p>The first line, <code>kshare * np.log(icap_lag)</code>, is the log of <span class="math inline">\(K^{\alpha}\)</span>. The second, <code>(1 - kshare) * np.log(ilabfe)</code>, is the log of <span class="math inline">\(L^{1-\alpha}\)</span>. The third, <code>np.log(...iprodfe)</code>, is the log of <span class="math inline">\(A\)</span>. The code <em>adds</em> them because, in log world, adding is what multiplying becomes. Finally <code>np.exp(...)</code> is the “undo” button: it reverses the logarithm and hands back the plain output number, <code>qgdpnfbfe</code>: potential nonfarm-business output.</p>
+<p>So the scary-looking code is nothing more than <span class="math inline">\(Y = A \cdot K^{\alpha} \cdot L^{1-\alpha}\)</span>, fed the <em>potential</em> version of each ingredient, and run through logs for the computer’s convenience.</p>
+</section>
+<section id="up-next" class="level2">
+<h2 class="anchored" data-anchor-id="up-next">Up next</h2>
+<p>We have the engine. Now we need to fill its tank, to actually measure each ingredient, at its “potential” setting. We’ll start with the one humans care about most: labor.</p>
 
-</div>
-<script type="pyodide-1-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoiZmlnLWNhcGl0YWwtZ3Jvd3RoIn0sImNvZGUiOiJmb3IgeCBpbiByYW5nZSg1KTpcbiAgcHJpbnQoeCAqKiAyKSJ9
-</script>
-</div>
-<p>And more stuff</p>
 
-
-<script type="pyodide-data">
-eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yOC4xL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIiwibWF0cGxvdGxpYiIsIm51bXB5Iiwic2NpcHkiLCJwYW5kYXMiXX19
-</script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
+eyJjb250ZW50cyI6W119
 </script>
 <div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
 <div id="exercise-loading-status" class="d-flex gap-2">
@@ -401,7 +431,7 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../production";
+window._ojs.paths.runtimeToDoc = "../../cbo";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "..";
 window._ojs.selfContained = false;
