@@ -1,0 +1,123 @@
+---
+title: "Putting It Together: From Ingredients to Potential GDP"
+format: live-html
+reference-location: margin
+order: 7
+---
+
+## From parts to a whole
+
+For the last few pages we have been building ingredients. We measured how many hours people can sustainably work (labor), how hard the economy's machines and buildings are working (capital services), and the leftover know-how that lets the same workers and machines produce more over time (total factor productivity, or TFP). Each one was its own number, sitting in its own file.
+
+Now we cook. This page is where the ingredients go into the pot and come out as a single dish: **potential GDP**, the dollar value of everything the economy *could* produce at full, sustainable use of its workers and machines.
+
+Think of it like a recipe. We have flour, eggs, and sugar measured out. The recipe tells us how to combine them, and the oven turns them into a cake. Our "recipe" is the production function, and our final cake is one number per year for the whole U.S. economy.
+
+## The engine, one more time
+
+The biggest chunk of the economy (about three-quarters of it) is the **nonfarm business** sector.^[Nonfarm business, or NFB, is basically every private company that isn't a farm: factories, stores, banks, software firms, restaurants. It is where most of the action is.] This is the part that runs on the full engine you met a few pages back. We plug in three things (potential labor, potential capital, and potential TFP) and the engine hands us potential output for that sector.
+
+That engine has a name, the **Cobb-Douglas production function**, and it looks like this:
+
+::: {#nte-cobb-douglas .callout-note title="The production function (the engine)"}
+Potential nonfarm-business output is the technology level $A$ times capital $K$ and labor $L$, each raised to a power that reflects how big a role it plays:
+$$
+Y = A \, K^{\alpha} \, L^{1-\alpha}
+$$
+Here $\alpha$ (about $0.36$ in the U.S.) is capital's share of income, so $1-\alpha$ (about $0.64$) is labor's share. The two powers add up to one, which is just a way of saying "if you double *both* workers and machines, you double output."
+:::
+
+In the code, this same equation is written in **logarithms**, a trick that turns the multiplications and powers into plain additions, which computers and statisticians both prefer.^[A logarithm answers "how many times do I multiply to get this number?" Working in logs turns "$A$ times $K^\alpha$ times $L^{1-\alpha}$" into "log A plus alpha times log K plus...": addition instead of multiplication. At the end we undo the log with $e^x$ (`np.exp`) to get back to dollars.] Here is the actual line, copied from `aggregation.py`:
+
+```python
+log_qgdpnfbfe = (
+    kshare * np.log(icap_lag)
+    + (1 - kshare) * np.log(ilabfe)
+    + np.log(annual_potentials["iprodfe"])
+    + gdpconst
+)
+qgdpnfbfe = np.exp(log_qgdpnfbfe).rename("qgdpnfbfe")
+```
+
+Read it in plain English: take capital's share (`kshare`, that is $\alpha$) times log capital (`icap_lag`), add labor's share (`1 - kshare`) times log labor (`ilabfe`), add log TFP (`iprodfe`), add a constant that just fixes the units, and undo the log. Out pops `qgdpnfbfe`, potential nonfarm-business output. The `fe` on the end is the model's tag for "full employment," its shorthand for *potential*.
+
+## The other sectors take a simpler path
+
+The rest of the economy (the other quarter) does not get the full engine. There are four leftover pieces: **farms**, **households** (which here mostly means the value of living in a home you own), **nonprofits**, and **government** (federal and state-and-local).
+
+For most of these, potential output is computed the simple way: potential hours times potential productivity.^[Productivity here just means "output per hour of work." If a worker can produce 50 dollars of stuff per hour and works a billion hours, that's 50 billion dollars of output. Hours times productivity.] No capital, no TFP, no powers, just how many hours people work and how much each hour produces.
+
+Housing is the one exception, and it is a fun one. You do not "work hours" to live in your own house. The house itself does the producing, like a tool you own rather than rent. So for housing the model uses the *return on the housing stock*: the value the home throws off each year, scaled by how much housing there is. It is the one place in the whole model where capital, not labor, is doing the work.
+
+## Aggregation: why you can't just add dollars
+
+Now we have a number for each sector. The obvious move is to add them up. **Aggregation** is exactly that: combining the sectors into one economy-wide total.
+
+But here is the catch, and it is the heart of this page. You cannot simply add up "real" dollars across sectors. **Real** means inflation-adjusted: dollars stripped of price changes so you are measuring actual *stuff*, not just bigger price tags. The trouble is that different sectors have wildly different price trends. Computers get cheaper every year; haircuts and houses get more expensive. So a "2009 dollar" of computers and a "2009 dollar" of haircuts are not really the same kind of dollar, and naively summing them gives a misleading total.
+
+So how do the official statisticians handle it? With something called the **Fisher index**.
+
+## The Fisher index: a fair average
+
+Imagine you want to combine fast-growing computer output with slow-growing food output into one "total output" number. You need to weight them by price, but *which year's prices*?
+
+If you weight by **old prices** (computers were absurdly expensive back then), computers dominate the weights and their fast growth gets *overstated*. Statisticians call this the **Laspeyres** way.
+
+If you weight by **new prices** (computers are cheap now), computers barely count and their growth gets *understated*. That is the **Paasche** way.
+
+Both are reasonable. Both are biased, in opposite directions. So the Fisher index does the obvious fair thing: it splits the difference by taking the **geometric mean** of the two.^[A geometric mean is like a regular average, but for things that multiply: you multiply the numbers and take the square root. For growth rates, it is the honest way to average. If one estimate is too high and the other too low, the geometric mean lands sensibly in between and the two biases largely cancel.] One estimate leans high, the other leans low, and averaging them cancels most of the bias, like asking two people who always over- and under-guess and meeting in the middle.
+
+::: {#nte-fisher .callout-note title="The Fisher index"}
+The Fisher growth rate is the geometric mean (the square root of the product) of the Laspeyres and Paasche growth rates:
+$$
+\text{Fisher} = \sqrt{\text{Laspeyres} \times \text{Paasche}}
+$$
+This is the exact method the **BEA** (the Bureau of Economic Analysis, the government agency that measures official GDP) uses to add up the national accounts. CBO uses it too, so its potential GDP is an apples-to-apples match with the BEA's actual GDP.
+:::
+
+In the code, that "fair average" is literally a square root. Here it is, verbatim from `fisher.py`:
+
+```python
+# ── Step 3: Fisher indices ──
+# Fisher = geometric mean of Laspeyres and Paasche
+fisher_q = np.sqrt(laspeyres_q_gross * paasche_q)
+fisher_p = np.sqrt(laspeyres_p_gross * paasche_p)
+```
+
+## The payoff picture
+
+Before we write down the final total, let's look at what all this machinery actually buys us. @fig-contrib breaks potential nonfarm-business growth into its three ingredients (labor, capital, and TFP) and shows how much each one added in different eras. This is the picture that ties together everything from the last few pages.
+
+![How much each ingredient (labor, capital, and TFP) adds to potential nonfarm-business growth, by era.](images/contributions.png){#fig-contrib width=88%}
+
+Each bar is a stretch of history, and the colored segments stack up to that era's total potential growth. A few things jump out. In the **Golden Age** (1950-1973) all three ingredients were generous, and TFP alone (the pure "we got smarter" piece) contributed nearly 1.9 percentage points a year. The total potential growth back then was about 4% a year, which is fast.
+
+Then look at the right-hand bars. After 2007, *all three* segments shrink at once. Labor growth slows as the workforce ages, capital deepening cools off, and TFP growth drops to under 1 point a year. Stacked together, potential growth falls to roughly 1.65% a year, about two-fifths of the Golden Age pace. The slump isn't one bad ingredient; it is a little less of everything.
+
+## The final total
+
+With the picture in mind, the last step is short. We take the nonfarm-business output from the engine and add the other sectors. In the code the headline line reads:
+
+```python
+gdpfe = (gdpnfbfe + gdpgfe + sectoral_potentials["gdpaffe"] + gdpsvhfe).rename("gdpfe")
+```
+
+That is potential GDP in plain *nominal* (current-price) dollars: nonfarm business plus government plus farms plus household-and-nonprofit. Adding nominal dollars is fine, because nominal dollars are all in the same year's prices already.
+
+For the *real* (inflation-adjusted) total, we use the Fisher index instead of plain addition. That is the `fisher_aggregate_with_residual` call below. And then there is one last friendly tweak:
+
+```python
+qgdpfe, pgdpfe = fisher_aggregate_with_residual(
+    nominal_all, real_all, price_all,
+    residual=smoothed_residuals.get("qgdp_resfe"),
+    sample_start=sample_start, sample_end=sample_end,
+)
+```
+
+Notice the `residual=...` part. Because Fisher aggregation rebuilds the total from sub-pieces, our sum can land a hair away from the BEA's official definition of GDP. So the model adds back a tiny, pre-smoothed correction (the **Fisher residual**) so that our potential total lines up exactly with how the official statisticians draw the GDP boundary. It is a small nudge, nothing more, but it is what keeps the model honest against the published numbers.
+
+## What we have, and what's next
+
+And that's the dish out of the oven. We now have `qgdpfe` (one number for each year, real potential GDP in 2009 dollars) assembled from labor, capital, and TFP, glued together the same way the BEA glues actual GDP. We can trace it all the way back through history.
+
+But every number so far has been *historical*: what the economy could have produced from 1949 to today. The obvious question is the one a forecaster actually cares about: how does this model say anything about the **future**? That turns out to hinge on a single fork in the road, and it is where we go next.
