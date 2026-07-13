@@ -194,7 +194,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/production-function.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Production Function: the Economy’s Engine</span></a>
+ <span class="menu-text">The Production Function</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -212,13 +212,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/tfp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Total Factor Productivity: the Leftover That Runs the Show</span></a>
+ <span class="menu-text">Total Factor Productivity: the Leftover</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/aggregation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Putting It Together: From Ingredients to Potential GDP</span></a>
+ <span class="menu-text">Putting It Together: From Inputs to Potential GDP</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -284,16 +284,15 @@ window.Quarto = {
 
 <section id="the-economy-has-a-speedometer" class="level2">
 <h2 class="anchored" data-anchor-id="the-economy-has-a-speedometer">The economy has a speedometer</h2>
-<p>Imagine you are on a highway, and your car can hit 120 miles per hour. <em>Could</em> you drive that fast the whole trip? Sure, for a while. But the engine would scream, you would burn through gas, and something would eventually break. There is a different speed (call it your comfortable cruising speed) that you can hold for hours without straining anything. Fast, but sustainable.</p>
-<p>An economy works the same way. On any given day it produces some amount of stuff, and sometimes it can produce <em>more</em> than usual by working everyone overtime and running every factory flat out. But there is also a comfortable cruising speed: the level of output the economy can sustain without overheating. This page is about measuring both, the speed the economy is actually going, and the speed it <em>could</em> comfortably hold, and what the difference between them tells us.</p>
-<p>That gap is the single most important number this whole model exists to produce. So let’s build up to it carefully.</p>
+<p>Your car can hit 120 miles per hour. <em>Could</em> you drive that fast the whole trip? For a while. But the engine would scream, you would burn through gas, and something would break. There is a different speed, your comfortable cruising speed, that you can hold for hours. Fast, but sustainable.</p>
+<p>An economy works the same way. It can produce <em>more</em> than usual for a stretch by working everyone overtime and running every factory flat out. But it also has a cruising speed: the level of output it can sustain without overheating. This page measures both speeds and the difference between them.</p>
+<p>That difference is the number this whole model exists to produce.</p>
 </section>
-<section id="what-gdp-actually-measures" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="what-gdp-actually-measures">What GDP actually measures</h2>
-<p>First, the basic thing we are measuring.</p>
-<p><strong>GDP</strong> stands for <em>Gross Domestic Product</em>. It is the dollar value of everything an economy produces in a year: every haircut, every loaf of bread, every phone, every doctor’s visit, all added up into one giant number.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> If you made a list of every good and service the country produced and multiplied each by its price, the total is GDP.</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;For the U.S. that number is in the tens of trillions of dollars. The exact figure is less important than how it <em>moves</em> over time.</p></div></div><p>There is one trap with that. Suppose next year the country produces the <em>exact same</em> loaves of bread, but bread costs twice as much. Dollar-value GDP would double, even though not one extra loaf was baked. That is just inflation (prices rising), not the economy actually making more.</p>
-<p>To get around this, economists use <strong>real GDP</strong>: GDP adjusted so we are counting <em>stuff</em>, not price changes. Think of it as freezing prices at one year’s level and asking, “how much actual stuff did we produce?” When real GDP goes up, it means the economy genuinely made more (more bread, more phones, more haircuts) not that things just got pricier.</p>
+<section id="what-gdp-measures" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-gdp-measures">What GDP measures</h2>
+<p><strong>GDP</strong> stands for <em>Gross Domestic Product</em>: the dollar value of everything an economy produces in a year. Every haircut, every loaf of bread, every phone, every doctor’s visit, added up into one number.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> List every good and service the country produced, multiply each by its price, and the total is GDP.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;For the U.S. that number is in the tens of trillions of dollars. The exact figure matters less than how it <em>moves</em> over time.</p></div></div><p>There is a trap. Suppose next year the country produces the <em>exact same</em> loaves of bread, but bread costs twice as much. Dollar-value GDP doubles, and not one extra loaf was baked. That is inflation, not production.</p>
+<p>The fix is <strong>real GDP</strong>: GDP adjusted so we count <em>stuff</em>, not price changes. Freeze prices at one year’s level and ask how much was actually produced. When real GDP rises, the economy genuinely made more.</p>
 <div id="nte-real-gdp" class="callout callout-style-default callout-note callout-titled" title="Real GDP">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -311,26 +310,24 @@ Note&nbsp;1: Real GDP
 </section>
 <section id="potential-gdp-the-cruising-speed-not-the-top-speed" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="potential-gdp-the-cruising-speed-not-the-top-speed">Potential GDP: the cruising speed, not the top speed</h2>
-<p>Now back to the speedometer.</p>
-<p><strong>Potential GDP</strong> is <em>not</em> the maximum the economy can produce. It is the sustainable level, the cruising speed. It answers a hypothetical question: how much <em>would</em> the economy produce if its workers and factories were being used at normal, healthy, non-inflationary rates?</p>
-<p>“Non-inflationary” is the key phrase. You <em>can</em> push an economy past its potential for a while: hire every available worker, run the machines around the clock, pay overtime. Output goes up. But just like flooring the car, you can’t hold it there. Prices start rising, the labor market gets frantic, and the strain shows up as inflation. So potential GDP is the fast-but-sustainable pace, the speed a marathon runner can hold for the whole race, not the all-out sprint they can manage for the final hundred meters.</p>
+<p><strong>Potential GDP</strong> is <em>not</em> the maximum the economy can produce. It is the sustainable level, the cruising speed. It answers a hypothetical: how much <em>would</em> the economy produce if its workers and factories were used at normal, non-inflationary rates?</p>
+<p>“Non-inflationary” is the key word. You <em>can</em> push an economy past its potential: hire every available worker, run the machines around the clock, pay overtime. Output rises. But like flooring the car, you can’t hold it there. Prices rise, the labor market gets frantic, and the strain shows up as inflation. Potential GDP is the fast-but-sustainable pace.</p>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">Two things drive potential output: how many people are working at normal rates, and how much they each produce. The rest of this section unpacks both.</span></div></div>
-<p>Here is the crucial difference from real GDP. <em>Real</em> GDP is something we can observe. We measure what the economy actually did. <em>Potential</em> GDP can never be observed directly, because it is a “what if.” Nobody runs the economy twice, once normally and once flat-out, to compare. We have to <em>estimate</em> it from a model. Building that estimate, carefully and faithfully to the way the Congressional Budget Office does it, is what every other page in this section is about.</p>
+<p>The crucial difference from real GDP: <em>real</em> GDP is observable. We measure what the economy did. <em>Potential</em> GDP can never be observed, because it is a “what if.” Nobody runs the economy twice, once normally and once flat-out, to compare. It has to be <em>estimated</em> from a model. Building that estimate, the way the Congressional Budget Office builds it, is what the rest of these pages do.</p>
 </section>
 <section id="the-output-gap-how-far-above-or-below-cruising-speed" class="level2">
 <h2 class="anchored" data-anchor-id="the-output-gap-how-far-above-or-below-cruising-speed">The output gap: how far above or below cruising speed</h2>
-<p>Once you have both numbers (actual real GDP and potential GDP) the interesting thing is the distance between them. That distance is the <strong>output gap</strong>.</p>
-<p>The output gap is just the percentage difference between what the economy actually produced and what it could sustainably produce:</p>
+<p>The distance between actual real GDP and potential GDP is the <strong>output gap</strong>: the percentage difference between what the economy produced and what it could sustainably produce.</p>
 <p><span class="math display">\[
 \text{output gap} = \left(\frac{\text{actual GDP}}{\text{potential GDP}} - 1\right) \times 100
 \]</span></p>
-<p>Read it like a speedometer reading relative to your cruising speed:</p>
+<p>Read it as a speedometer reading relative to your cruising speed:</p>
 <ul>
-<li>A <strong>negative</strong> gap means actual is <em>below</em> potential. The economy is coasting under its comfortable speed. This is <strong>slack</strong>: idle factories, workers who want jobs but can’t find them. This is what a recession looks like.</li>
-<li>A <strong>positive</strong> gap means actual is <em>above</em> potential. The economy is flooring it, running hot, with inflation pressure building.</li>
-<li>A gap near <strong>zero</strong> means the economy is humming along right at its cruising speed.</li>
+<li>A <strong>negative</strong> gap: actual is <em>below</em> potential. The economy is coasting under its comfortable speed. This is <strong>slack</strong>: idle factories, workers who want jobs but can’t find them. A recession.</li>
+<li>A <strong>positive</strong> gap: actual is <em>above</em> potential. The economy is flooring it, and inflation pressure builds.</li>
+<li>A gap near <strong>zero</strong>: the economy is at its cruising speed.</li>
 </ul>
-<p>You can see both pieces in <a href="#fig-gap" class="quarto-xref">Figure&nbsp;1</a>. Actual and potential GDP track each other closely most of the time, but in recessions, the actual line dips below potential and a shaded gap opens up. That shaded area <em>is</em> the slack: production the economy could have managed but didn’t.</p>
+<p><a href="#fig-gap" class="quarto-xref">Figure&nbsp;1</a> shows both pieces. Actual and potential GDP track each other closely most of the time. In recessions, the actual line dips below potential and a shaded gap opens up. That shaded area <em>is</em> the slack: production the economy could have managed but didn’t.</p>
 <div id="fig-gap" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -342,17 +339,17 @@ Figure&nbsp;1: Actual and potential GDP move together, but actual falls below in
 </figure>
 </div>
 </section>
-<section id="why-the-cbo-cares-so-much-about-this-number" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="why-the-cbo-cares-so-much-about-this-number">Why the CBO cares so much about this number</h2>
-<p>So why does a government agency spend so much effort estimating an invisible “what if”? Because the output gap tells policymakers how much room they have to act.</p>
-<p>The <strong>Congressional Budget Office (CBO)</strong> is the nonpartisan agency that crunches numbers for the U.S. Congress. Its potential-GDP estimates feed directly into the federal budget projections Congress relies on, and they inform the <strong>Federal Reserve</strong>, the central bank that sets interest rates.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;The Federal Reserve, or “the Fed,” is the institution that adjusts interest rates to keep inflation and unemployment in check. It watches the output gap like a thermostat watches the temperature.</p></div></div><p>Here is the concrete payoff. In a downturn, the gap measures how much slack there is, how much the economy could safely produce above what it currently is. If the gap is large and negative, there is plenty of room to stimulate the economy (lower interest rates, government spending) <em>without</em> triggering inflation, because you are just bringing output back up to its cruising speed, not pushing past it. If the gap is near zero, that same stimulus would overheat things. The output gap is the thermostat reading that tells policymakers whether to add heat or hold steady.</p>
+<section id="why-the-cbo-cares" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="why-the-cbo-cares">Why the CBO cares</h2>
+<p>The output gap tells policymakers how much room they have to act.</p>
+<p>The <strong>Congressional Budget Office (CBO)</strong> is the nonpartisan agency that crunches numbers for the U.S. Congress. Its potential-GDP estimates feed the federal budget projections Congress relies on, and they inform the <strong>Federal Reserve</strong>, the central bank that sets interest rates.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;The Federal Reserve, or “the Fed,” adjusts interest rates to keep inflation and unemployment in check.</p></div></div><p>In a downturn, the gap measures slack: how much more the economy could safely produce. If the gap is large and negative, there is room to stimulate (lower interest rates, government spending) <em>without</em> triggering inflation, because stimulus just brings output back up to cruising speed. If the gap is near zero, the same stimulus overheats the economy.</p>
 </section>
-<section id="what-the-deepest-gap-looked-like" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-deepest-gap-looked-like">What the deepest gap looked like</h2>
-<p>To make this real, look at the worst moment in our data: the trough of the <strong>2009 recession</strong>, the bottom of the financial crisis.</p>
-<p>At that point, actual GDP sat about <strong>6.4% below potential</strong>, the deepest gap anywhere in the sample. Translate that into plain terms: the economy was producing roughly 6 cents less of every dollar’s worth of output it could have sustained. Multiply that across a multi-trillion-dollar economy and it is an enormous amount of lost production: factories quiet, millions of workers without jobs they wanted. That single number is why the policy response was so aggressive: the gap was screaming that there was huge room to stimulate before any risk of overheating.</p>
-<p>You can trace that whole history in <a href="#fig-gap2" class="quarto-xref">Figure&nbsp;2</a>, which plots the gap over time. The line spends most of its life wiggling near zero, dips in each recession, and plunges to its lowest point, that −6.4%, at the 2009 trough.</p>
+<section id="the-deepest-gap" class="level2">
+<h2 class="anchored" data-anchor-id="the-deepest-gap">The deepest gap</h2>
+<p>The worst moment in the data is the trough of the <strong>2009 recession</strong>, the bottom of the financial crisis.</p>
+<p>Actual GDP sat about <strong>6.4% below potential</strong>, the deepest gap in the sample. In plain terms: the economy produced roughly 6 cents less of every dollar’s worth of output it could have sustained. Across a multi-trillion-dollar economy, that is an enormous amount of lost production: factories quiet, millions of workers without jobs they wanted. That number is why the policy response was so aggressive. There was huge room to stimulate before any risk of overheating.</p>
+<p><a href="#fig-gap2" class="quarto-xref">Figure&nbsp;2</a> plots the gap over time. The line wiggles near zero, dips in each recession, and hits its lowest point, that −6.4%, at the 2009 trough.</p>
 <div id="fig-gap2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gap2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -364,17 +361,16 @@ Figure&nbsp;2: The output gap over time: how far actual GDP sits above or below 
 </figure>
 </div>
 </section>
-<section id="one-line-of-code-the-whole-idea" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="one-line-of-code-the-whole-idea">One line of code, the whole idea</h2>
-<p>Everything above comes down to a single line in the project’s code. In <code>scenarios.py</code>, once the model has computed both the actual and potential series, the output gap is just:</p>
+<section id="one-line-of-code" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="one-line-of-code">One line of code</h2>
+<p>In <code>scenarios.py</code>, once the model has computed both series, the output gap is one line:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Output gap = how far actual GDP sits below potential, in percent.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"output_gap_pct"</span>] <span class="op">=</span> (df[<span class="st">"qgdp"</span>] <span class="op">/</span> df[<span class="st">"qgdpfe"</span>] <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Don’t let the short variable names throw you. In this project, <code>qgdp</code> is <strong>actual real GDP</strong> (what the economy really produced) and <code>qgdpfe</code> is <strong>potential real GDP</strong>, the cruising-speed estimate (the <code>fe</code> stands for “full employment”).<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> The line divides one by the other, subtracts 1, and multiplies by 100 to turn it into a percentage. That is exactly the formula we wrote out above, and it is the same arithmetic the figures are drawn from.</p>
-<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;You’ll see this <code>fe</code> suffix all over the code. Any series ending in <code>fe</code> is the <em>potential</em> version of that series.</p></div></div></section>
-<section id="where-we-go-next" class="level2">
-<h2 class="anchored" data-anchor-id="where-we-go-next">Where we go next</h2>
-<p>We now have the headline number (the output gap) and we know why it matters. But notice the catch: computing it requires <code>qgdpfe</code>, potential GDP, the invisible “what if” that we can never just read off a chart. The entire rest of this section is the recipe for <em>building</em> that number.</p>
-<p>And a recipe is exactly the right way to think about it. To turn ingredients (workers, machines, and know-how) into output, you need a formula that says how they combine. Economists call that formula the <strong>production function</strong>. It is the engine at the heart of the model, and it is where we turn next.</p>
+<p><code>qgdp</code> is <strong>actual real GDP</strong>. <code>qgdpfe</code> is <strong>potential real GDP</strong>, the cruising-speed estimate (the <code>fe</code> stands for “full employment”).<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> The line divides one by the other, subtracts 1, and multiplies by 100. That is the formula above, and the same arithmetic the figures are drawn from.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Any series ending in <code>fe</code> is the <em>potential</em> version of that series. The suffix appears all over the code.</p></div></div></section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s next</h2>
+<p>Computing the gap requires <code>qgdpfe</code>, potential GDP, which cannot be read off any chart. The rest of these pages build it. The starting point is the rule for how workers, machines, and know-how combine into output: the <strong>production function</strong>.</p>
 
 
 <script type="ojs-module-contents">

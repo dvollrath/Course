@@ -194,7 +194,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/production-function.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Production Function: the Economy’s Engine</span></a>
+ <span class="menu-text">The Production Function</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -212,13 +212,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/tfp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Total Factor Productivity: the Leftover That Runs the Show</span></a>
+ <span class="menu-text">Total Factor Productivity: the Leftover</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/aggregation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Putting It Together: From Ingredients to Potential GDP</span></a>
+ <span class="menu-text">Putting It Together: From Inputs to Potential GDP</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -282,21 +282,20 @@ window.Quarto = {
 </header>
 
 
-<section id="where-we-are" class="level2">
-<h2 class="anchored" data-anchor-id="where-we-are">Where we are</h2>
-<p>Last page, we met the engine: a recipe that turns <em>workers</em> and <em>machines</em> into <em>output</em>. We said the engine has two main ingredients, labor and capital, plus a quality knob called productivity. This page is about the first ingredient (labor) and about one idea that turns out to matter for the whole rest of the model.</p>
-<p>Here is the idea. We do not want to measure how much work the economy is <em>actually</em> doing right now. We want to measure how much work it would be doing if things were <em>normal</em>, not in the middle of a boom, not in the middle of a slump. That “if things were normal” version is what we’ll call <strong>potential</strong>. Getting from the actual, wiggly numbers to the smooth potential version is the real job of this page.</p>
+<section id="the-idea" class="level2">
+<h2 class="anchored" data-anchor-id="the-idea">The idea</h2>
+<p>We do not want to measure how much work the economy is <em>actually</em> doing right now. We want how much work it would be doing if things were <em>normal</em>: not in a boom, not in a slump. That “if things were normal” version is what the model calls <strong>potential</strong>. Getting from the actual, wiggly numbers to the smooth potential version is the job of this page, and the method here gets reused for the rest of the model.</p>
 </section>
-<section id="what-labor-even-means-here" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="what-labor-even-means-here">What “labor” even means here</h2>
-<p>Start simple. The amount of labor going into the economy is just:</p>
+<section id="what-labor-means-here" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-labor-means-here">What “labor” means here</h2>
+<p>The amount of labor going into the economy is:</p>
 <p><span class="math display">\[
 \text{labor} = (\text{number of people working}) \times (\text{hours each one works})
 \]</span></p>
-<p>That’s it. Ten people working 40 hours a week is the same amount of labor as twenty people working 20 hours. So to measure labor we need two things: a <em>headcount</em> (how many people have jobs) and an <em>hours count</em> (how long they’re each on the clock). The code handles these in two stages (employment first, then hours) and this page follows that order.</p>
-<p>Before we count, two terms you’ll need.</p>
+<p>Ten people working 40 hours a week is the same amount of labor as twenty people working 20 hours. Measuring labor takes two counts: a <em>headcount</em> (how many people have jobs) and an <em>hours count</em> (how long each is on the clock). The code handles employment first, then hours. This page follows that order.</p>
+<p>Two terms first.</p>
 <p>The <strong>labor force</strong> is everyone who either has a job or is actively looking for one.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Someone who has retired, or who isn’t looking for work at all, is <em>not</em> in the labor force. The labor force is the pool of people available to work.</p></div></div><p>The <strong>natural rate of unemployment</strong> is the slice of that labor force that is unemployed even when the economy is humming along fine. It is never zero. At any moment some people are between jobs: they just moved, they just graduated, they’re switching careers. That churn is normal and healthy, and it means a perfectly healthy economy still has, say, four or five people out of every hundred looking for work.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Someone who has retired, or who isn’t looking for work at all, is <em>not</em> in the labor force. The labor force is the pool of people available to work.</p></div></div><p>The <strong>natural rate of unemployment</strong> is the fraction of that labor force that is unemployed even when the economy is doing fine. It is never zero. At any moment some people are between jobs: they just moved, they just graduated, they’re switching careers. That churn is normal, so a healthy economy still has four or five people out of every hundred looking for work.</p>
 <div id="nte-natural" class="callout callout-style-default callout-note callout-titled" title="Natural rate of unemployment">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -313,10 +312,9 @@ Note&nbsp;1: Natural rate of unemployment
 </section>
 <section id="potential-means-ignore-the-wiggle" class="level2">
 <h2 class="anchored" data-anchor-id="potential-means-ignore-the-wiggle">“Potential” means: ignore the wiggle</h2>
-<p>Now the key move.</p>
-<p>Think about a thermostat. The temperature in your room is never exactly 70 degrees. It drifts a degree up when the heater kicks off, a degree down before it kicks back on. If someone asked you “how warm is this room?”, you wouldn’t recite every tiny fluctuation. You’d say “about 70.” That “about 70” is the <em>setting</em> (the level the room is built to hold) and the little up-and-down drift is just the system breathing.</p>
+<p>Think about a thermostat. The temperature in your room is never exactly 70 degrees. It drifts a degree up when the heater kicks off, a degree down before it kicks back on. Asked “how warm is this room?”, you say “about 70.” That “about 70” is the <em>setting</em>, the level the room is built to hold. The drift around it is just the system breathing.</p>
 <p>The economy works the same way. In a <strong>boom</strong> (a stretch when business is unusually strong), firms hire aggressively and more people work than the economy can sustain for long. In a <strong>recession</strong> (a stretch when business is unusually weak), firms cut back and fewer people work than normal. Employment is always drifting above or below its sustainable setting.</p>
-<p>That up-and-down drift around the economy’s normal level has a name: the <strong>business cycle</strong>.</p>
+<p>That drift around the economy’s normal level is the <strong>business cycle</strong>.</p>
 <div id="nte-cycle" class="callout callout-style-default callout-note callout-titled" title="Business cycle">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -330,37 +328,35 @@ Note&nbsp;2: Business cycle
 <p>The economy’s repeated swings above and below its long-run trend: booms when it runs hot, recessions when it runs cold. The cycle is the temporary wiggle; the trend is the underlying level the economy keeps returning to.</p>
 </div>
 </div>
-<p>“Potential employment” is the thermostat setting, not the temperature. It’s the headcount you’d see if the economy were running at a normal pace: no boom inflating it, no recession deflating it. And the distance between the actual headcount and that potential setting has a name too: the <strong>employment gap</strong>. When the gap is positive, more people are working than is sustainable (we’re hot); when it’s negative, fewer are working than normal (we’re cold).</p>
+<p>“Potential employment” is the thermostat setting, not the temperature. It is the headcount you’d see if the economy were running at a normal pace: no boom inflating it, no recession deflating it. The distance between the actual headcount and that setting is the <strong>employment gap</strong>. Positive gap: more people working than is sustainable (hot). Negative gap: fewer than normal (cold).</p>
 </section>
 <section id="building-the-gap-from-the-labor-force" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="building-the-gap-from-the-labor-force">Building the gap from the labor force</h2>
-<p>So how does the code pin down “potential”? It starts at the top, with the whole labor force.</p>
-<p>If the labor force has a certain number of people, and the natural rate says some normal fraction of them will be unemployed at any time, then the number who’d be working in normal times is just the rest. Multiply the labor force by <em>one minus</em> the natural rate, and you get potential employment as counted by the <strong>household survey</strong>, one of the two ways the government counts jobs.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;The government actually counts jobs <em>two</em> ways. The <strong>household survey</strong> phones households and asks who has a job. It counts <em>people</em>. The <strong>establishment survey</strong> asks businesses how many positions they’re filling. It counts <em>jobs</em>. The two disagree, partly because some people hold more than one job. The model estimates each on its own and then reconciles them; for the main story you only need the household count below.</p></div></div><p>Here is exactly that calculation, copied from <code>build_base_series</code> in <code>employment.py</code>:</p>
+<p>The code starts at the top, with the whole labor force.</p>
+<p>If the natural rate says some normal fraction of the labor force is unemployed at any time, then the number working in normal times is the rest. Multiply the labor force by <em>one minus</em> the natural rate. That gives potential employment as counted by the <strong>household survey</strong>, one of the two ways the government counts jobs.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;The government counts jobs <em>two</em> ways. The <strong>household survey</strong> phones households and asks who has a job. It counts <em>people</em>. The <strong>establishment survey</strong> asks businesses how many positions they’re filling. It counts <em>jobs</em>. The two disagree, partly because some people hold more than one job. The model estimates each on its own and then reconciles them; the main story only needs the household count below.</p></div></div><p>The calculation, copied from <code>build_base_series</code> in <code>employment.py</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ehhcfe <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> q[<span class="st">"rucfe"</span>] <span class="op">/</span> <span class="dv">100</span>) <span class="op">*</span> q[<span class="st">"lcfe"</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>empgap <span class="op">=</span> (q[<span class="st">"ehhc"</span>] <span class="op">/</span> ehhcfe <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>e_dif <span class="op">=</span> q[<span class="st">"etotal"</span>] <span class="op">-</span> q[<span class="st">"ehhc"</span>]</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>re_dif <span class="op">=</span> e_dif <span class="op">/</span> q[<span class="st">"ehhc"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Read the first two lines in plain English.</p>
-<p>Line one builds potential employment, named <code>ehhcfe</code>. <code>lcfe</code> is the labor force; <code>rucfe</code> is the natural rate of unemployment in percent. So <code>(1 - rucfe/100)</code> is “the fraction of the labor force that works in normal times,” and multiplying it by the labor force gives the normal, sustainable headcount.</p>
-<p>Line two builds the <strong>employment gap</strong>, named <code>empgap</code>. <code>ehhc</code> is the <em>actual</em> household headcount. The ratio <code>ehhc / ehhcfe</code> asks “how does today’s actual headcount compare to the normal one?”, and subtracting 1 and multiplying by 100 turns that into a percentage. If <code>empgap</code> is <code>+1.5</code>, actual employment is one and a half percent <em>above</em> its sustainable level: the economy is running hot. If it’s <code>-3</code>, employment is three percent below normal: we’re deep in a slump.</p>
-<p>That single number, <code>empgap</code>, is the economy’s thermometer. It shows up again and again, because it’s the signal the model uses to detect <em>which way</em> the cycle is pushing.</p>
+<p>Line one builds potential employment, named <code>ehhcfe</code>. <code>lcfe</code> is the labor force; <code>rucfe</code> is the natural rate of unemployment in percent. <code>(1 - rucfe/100)</code> is the fraction of the labor force that works in normal times. Multiplying by the labor force gives the normal, sustainable headcount.</p>
+<p>Line two builds the <strong>employment gap</strong>, named <code>empgap</code>. <code>ehhc</code> is the <em>actual</em> household headcount. The ratio <code>ehhc / ehhcfe</code> compares today’s headcount to the normal one; subtracting 1 and multiplying by 100 makes it a percentage. If <code>empgap</code> is <code>+1.5</code>, actual employment is one and a half percent <em>above</em> its sustainable level: hot. If it’s <code>-3</code>, employment is three percent below normal: a deep slump.</p>
+<p><code>empgap</code> is the economy’s thermometer. It shows up again and again, because it is the signal the model uses to detect which way the cycle is pushing.</p>
 </section>
 <section id="smoothing-the-wiggle-the-regression-idea" class="level2">
 <h2 class="anchored" data-anchor-id="smoothing-the-wiggle-the-regression-idea">Smoothing the wiggle: the regression idea</h2>
-<p>We now know how hot or cold the economy is at every moment. The remaining task is to take a bumpy, real-world employment series and recover the smooth potential path hiding underneath it. This is the first place in the model where we do that, and the same trick gets reused everywhere afterward, so it’s worth slowing down.</p>
-<p>The tool is a <strong>regression</strong>. A regression is just a disciplined way of drawing a line through scattered data. Imagine plotting a cloud of points and asking a computer, “draw me the single straight line that comes closest to all of them.” That line summarizes the trend and ignores the scatter. A regression does exactly that, except it can lean on several explanations at once, not just time.</p>
-<p>Here’s how the model uses it. For each employment series, the regression is told to explain the bumpy data using two <em>kinds</em> of ingredients:</p>
+<p>The remaining task: take a bumpy, real-world employment series and recover the smooth potential path underneath it.</p>
+<p>The tool is a <strong>regression</strong>. A regression is a disciplined way of drawing a line through scattered data. Plot a cloud of points and ask a computer for the single straight line that comes closest to all of them. That line summarizes the trend and ignores the scatter. A regression does that, except it can lean on several explanations at once, not just time.</p>
+<p>For each employment series, the regression explains the bumpy data with two kinds of variables:</p>
 <ul>
-<li><strong>The cyclical signals</strong>: the employment gap <code>empgap</code> and its quarter-to-quarter change. These capture the wiggle: how much of today’s number is just the boom or the slump talking.</li>
-<li><strong>A set of piecewise time trends.</strong> A <strong>time trend</strong> is simply a steady drift as the years pass: picture a straight line sloping gently upward across the decades. <em>Piecewise</em> means the model doesn’t force one single slope across all of history; it allows a different straight-line slope for each era (the 1950s, the 1970s, the years after 2001, and so on), because the workforce grew at genuinely different rates in different decades. Think of it as connecting several straight segments end to end instead of bending one rigid ruler across seventy years.</li>
+<li><strong>The cyclical signals</strong>: the employment gap <code>empgap</code> and its quarter-to-quarter change. These capture the wiggle: how much of today’s number is the boom or the slump talking.</li>
+<li><strong>A set of piecewise time trends.</strong> A <strong>time trend</strong> is a steady drift as the years pass: a straight line sloping across the decades. <em>Piecewise</em> means the model doesn’t force one slope across all of history. It allows a different straight-line slope for each era (the 1950s, the 1970s, the years after 2001, and so on), because the workforce grew at genuinely different rates in different decades. Several straight segments, connected end to end.</li>
 </ul>
-<p>The regression figures out how much weight each ingredient deserves. And here’s the payoff: once it knows the recipe, it can <strong>keep the trend part and throw away the cyclical part</strong>. The trend part is the smooth, sustainable path. That’s potential. The cyclical part is the wiggle we wanted gone.</p>
-<p>The everyday version of this: it’s like ignoring whether today happens to be unusually hot or rainy so you can see the <em>climate</em>: the underlying pattern of the seasons. Or like taking a wobbly line you drew freehand and tracing the clean curve you <em>meant</em> to draw. You’re not inventing anything; you’re removing the noise.</p>
+<p>The regression figures out how much weight each variable deserves. Then the payoff: <strong>keep the trend part and throw away the cyclical part.</strong> The trend part is the smooth, sustainable path. That is potential. The cyclical part is the wiggle we wanted gone.</p>
 </section>
 <section id="subtracting-the-cycle-line-by-line" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="subtracting-the-cycle-line-by-line">Subtracting the cycle, line by line</h2>
-<p>The function that does the throwing-away is named <code>strip_cycle</code>. Here it is, verbatim from <code>employment.py</code>:</p>
+<p>The function that does the throwing-away is named <code>strip_cycle</code>. Verbatim from <code>employment.py</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> strip_cycle(y_hat, X, results):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Subtract the cyclical contributions (empgap, Δempgap, dummy_census)</span></span>
@@ -380,10 +376,10 @@ Note&nbsp;2: Business cycle
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        <span class="op">-</span> X[<span class="st">"delta_empgap"</span>] <span class="op">*</span> results.params[<span class="st">"delta_empgap"</span>]</span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="op">-</span> X[<span class="st">"dummy_census"</span>] <span class="op">*</span> results.params[<span class="st">"dummy_census"</span>]</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Don’t let the symbols scare you. The logic is one sentence. <code>y_hat</code> is the regression’s full prediction, trend <em>and</em> wiggle baked together. Each line below it pulls one cyclical piece back out.</p>
-<p>Take <code>X["empgap"] * results.params["empgap"]</code>. The regression learned how strongly the cycle pushes employment around: that learned strength is the <em>coefficient</em> (<code>results.params["empgap"]</code>). Multiply that strength by how hot or cold the economy actually was (<code>X["empgap"]</code>), and you get “the part of today’s employment that was purely the boom or slump talking.” Subtract it, and that contribution is gone. The function does the same for the <em>change</em> in the gap (<code>delta_empgap</code>) and for a one-off bump that has nothing to do with the cycle.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<code>dummy_census</code> is a tiny on/off switch that flips to 1 only in the handful of quarters when the government hired a wave of temporary Census workers (1970, 1980, 1990, 2000, 2010). That hiring spike isn’t part of the real trend, so the model treats it as one more thing to strip out, right alongside the cyclical terms.</p></div></div><p>What’s left after all the subtracting? The trend. The smooth, cycle-free path. That leftover <em>is</em> potential employment. Every “potential” series in this entire model (employment, hours, productivity, all of it) is built by this same two-step move: fit a line that explains both trend and cycle, then subtract the cycle back off.</p>
-<p>You can see the result in <a href="#fig-emp" class="quarto-xref">Figure&nbsp;1</a>. The bumpy line is actual employment; the smooth line riding through the middle of it is potential. Notice how actual employment sags <em>below</em> potential in every recession and climbs <em>above</em> it in every boom: exactly the breathing-around-a-setting picture we started with.</p>
+<p>The logic is one sentence. <code>y_hat</code> is the regression’s full prediction, trend <em>and</em> wiggle together. Each line below it pulls one cyclical piece back out.</p>
+<p>Take <code>X["empgap"] * results.params["empgap"]</code>. The regression learned how strongly the cycle pushes employment around: that learned strength is the <em>coefficient</em> (<code>results.params["empgap"]</code>). Multiply that strength by how hot or cold the economy actually was (<code>X["empgap"]</code>), and you get the part of today’s employment that was purely the boom or slump talking. Subtract it, and that contribution is gone. The function does the same for the <em>change</em> in the gap (<code>delta_empgap</code>) and for a one-off bump that has nothing to do with the cycle.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<code>dummy_census</code> is an on/off switch that flips to 1 only in the handful of quarters when the government hired a wave of temporary Census workers (1970, 1980, 1990, 2000, 2010). That hiring spike isn’t part of the real trend, so the model strips it out alongside the cyclical terms.</p></div></div><p>What’s left is the trend: the smooth, cycle-free path. That leftover <em>is</em> potential employment. Every “potential” series in this model (employment, hours, productivity, all of it) is built by this same two-step move: fit a line that explains both trend and cycle, then subtract the cycle back off.</p>
+<p><a href="#fig-emp" class="quarto-xref">Figure&nbsp;1</a> shows the result. The bumpy line is actual employment; the smooth line riding through the middle is potential. Actual employment sags <em>below</em> potential in every recession and climbs <em>above</em> it in every boom: the drift around the setting.</p>
 <div id="fig-emp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-emp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -395,17 +391,17 @@ Figure&nbsp;1: Potential employment is the smooth trend; actual employment dips 
 </figure>
 </div>
 </section>
-<section id="and-then-hours" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="and-then-hours">And then, hours</h2>
-<p>Headcount is only half of labor. We still need to know how long each person works.</p>
-<p>The model handles hours with the <em>exact same</em> recipe (fit a trend-plus-cycle line, then strip the cycle) just applied to a different quantity: <strong>average weekly hours</strong>, meaning the typical number of hours one worker puts in per week. To get that, the code takes each sector’s total hours and divides by the number of workers in it.</p>
+<section id="hours" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="hours">Hours</h2>
+<p>Headcount is half of labor. The other half is how long each person works.</p>
+<p>The model handles hours the same way (fit a trend-plus-cycle line, strip the cycle), applied to a different quantity: <strong>average weekly hours</strong>, the typical number of hours one worker puts in per week. The code takes each sector’s total hours and divides by the number of workers in it.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>weekly[<span class="ss">f"mhe</span><span class="sc">{</span>s<span class="sc">}</span><span class="ss">"</span>] <span class="op">=</span> (q[<span class="ss">f"mh</span><span class="sc">{</span>s<span class="sc">}</span><span class="ss">"</span>] <span class="op">/</span> q[<span class="ss">f"e</span><span class="sc">{</span>s<span class="sc">}</span><span class="ss">"</span>]) <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">52</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Here’s the careful version. <code>mh</code> is total hours worked over a year, measured in <em>billions</em> of hours; <code>e</code> is the number of workers, measured in <em>millions</em>. So dividing one by the other doesn’t quite give plain hours per worker: because billions divided by millions leaves a factor of a thousand, the raw ratio comes out in <em>thousands</em> of hours per worker per year. That’s what the two final numbers fix. The <code>1000</code> turns those thousands back into actual hours per worker per year, and the <code>52</code> then spreads that yearly figure across the 52 weeks of the year to give hours per worker per <em>week</em>. Once you have weekly hours, the same cycle-stripping logic recovers <em>potential</em> weekly hours: what a normal work-week would look like, with the overtime of a boom and the cutbacks of a slump removed.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;One small exception: military reservists are paid for fixed training periods set by law, so their hours barely move with the economy. There’s no cycle to strip, so the model just uses their actual hours.</p></div></div><p>Multiply potential headcount by potential weekly hours, and you have <strong>potential labor</strong>: the smooth, normal-times amount of work the economy supplies. That’s the first ingredient of the engine, fully built.</p>
+<p>The units need care. <code>mh</code> is total hours worked over a year, measured in <em>billions</em> of hours; <code>e</code> is the number of workers, in <em>millions</em>. Billions divided by millions leaves a factor of a thousand, so the raw ratio comes out in <em>thousands</em> of hours per worker per year. The <code>1000</code> converts those thousands into actual hours per worker per year, and the <code>52</code> spreads that yearly figure across the 52 weeks of the year, giving hours per worker per <em>week</em>. The same cycle-stripping then recovers <em>potential</em> weekly hours: a normal work-week, with the overtime of a boom and the cutbacks of a slump removed.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;One exception: military reservists are paid for fixed training periods set by law, so their hours barely move with the economy. There’s no cycle to strip, so the model uses their actual hours.</p></div></div><p>Multiply potential headcount by potential weekly hours: <strong>potential labor</strong>, the normal-times amount of work the economy supplies. The first input is built.</p>
 </section>
-<section id="up-next" class="level2">
-<h2 class="anchored" data-anchor-id="up-next">Up next</h2>
-<p>Labor is one ingredient; capital is the other. But capital comes with a twist. When you add up the machines, buildings, and computers a business uses, a dollar’s worth of one is <em>not</em> the same as a dollar’s worth of another: a delivery truck and a desktop computer earn their keep very differently. On the next page we’ll see why the model weighs each kind of capital by what it would cost to <em>rent</em> it, so that a dollar isn’t just a dollar.</p>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<p>Capital. A dollar’s worth of one asset is <em>not</em> the same as a dollar’s worth of another: a delivery truck and a desktop computer earn their keep very differently. The next page weighs each kind of capital by what it would cost to <em>rent</em>.</p>
 
 
 <script type="ojs-module-contents">

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Production Function: the Economy’s Engine – Macroeconomic Theory</title>
+<title>The Production Function – Macroeconomic Theory</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -151,7 +151,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/production-function.html">The Production Function: the Economy’s Engine</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/production-function.html">The Production Function</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -194,7 +194,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/production-function.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">The Production Function: the Economy’s Engine</span></a>
+ <span class="menu-text">The Production Function</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -212,13 +212,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/tfp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Total Factor Productivity: the Leftover That Runs the Show</span></a>
+ <span class="menu-text">Total Factor Productivity: the Leftover</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/aggregation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Putting It Together: From Ingredients to Potential GDP</span></a>
+ <span class="menu-text">Putting It Together: From Inputs to Potential GDP</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -263,9 +263,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/production-function.html">The Production Function: the Economy’s Engine</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/production-function.html">The Production Function</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The Production Function: the Economy’s Engine</h1>
+<h1 class="title">The Production Function</h1>
 </div>
 
 
@@ -282,27 +282,26 @@ window.Quarto = {
 </header>
 
 
-<section id="from-a-gap-to-an-engine" class="level2">
-<h2 class="anchored" data-anchor-id="from-a-gap-to-an-engine">From a gap to an engine</h2>
-<p>On the last page we measured the <em>output gap</em>, the difference between what the economy actually produced and what it could have produced at full, sustainable use of its resources. That left a big question hanging: where does the “could have produced” number even come from? You can’t look it up anywhere. Nobody publishes the economy’s top speed.</p>
-<p>So the model has to <em>build</em> it. And to build it, you need a rule that takes the economy’s ingredients and turns them into output. Economists call that rule a <strong>production function</strong>: a recipe that says, “give me this much of each ingredient, and I’ll tell you how much you can make.”</p>
-<p>That recipe is the engine at the heart of this whole model. This page is about how it works.</p>
+<section id="building-the-missing-number" class="level2">
+<h2 class="anchored" data-anchor-id="building-the-missing-number">Building the missing number</h2>
+<p>The output gap compares actual output to what the economy could have produced. That second number can’t be looked up anywhere. Nobody publishes it.</p>
+<p>The model has to build it. Building it requires a rule that turns the economy’s inputs into output. Economists call that rule a <strong>production function</strong>: a recipe that says, “give me this much of each ingredient, and I’ll tell you how much you can make.”</p>
 </section>
 <section id="output-is-a-dish-the-ingredients-are-labor-capital-and-know-how" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="output-is-a-dish-the-ingredients-are-labor-capital-and-know-how">Output is a dish; the ingredients are labor, capital, and know-how</h2>
 <p>Think about baking bread.</p>
-<p>The loaf that comes out of the oven is your <strong>output</strong>, the thing you actually made. To get it, you needed three kinds of ingredient:</p>
+<p>The loaf that comes out of the oven is your <strong>output</strong>. To get it, you needed three kinds of ingredient:</p>
 <ul>
 <li><strong>Labor</strong>: the hours of work people put in. The baker kneading, measuring, watching the oven. In the economy, this is the total hours that workers put in.</li>
 <li><strong>Capital</strong>: the <em>tools and equipment</em> you bake with: the oven, the mixer, the pans, the kitchen itself. In the economy, capital means machines, factories, office buildings, trucks, computers, and software.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
-<li><strong>Know-how</strong>: how good your recipe is. Two bakers with the exact same oven, the same flour, and the same hours can get very different loaves if one has a better technique. Economists call this <strong>total factor productivity</strong>, usually shortened to <strong>TFP</strong>, basically, how cleverly you combine everything else.</li>
+<li><strong>Know-how</strong>: how good your recipe is. Two bakers with the exact same oven, the same flour, and the same hours can get very different loaves if one has a better technique. Economists call this <strong>total factor productivity</strong>, shortened to <strong>TFP</strong>: how cleverly you combine everything else.</li>
 </ul>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Capital is anything durable that helps you produce but isn’t “used up” in one go. A loaf of bread is output; the oven that baked it is capital.</p></div></div><p>The big idea is simple and intuitive: you get more output if you add more of any ingredient <em>or</em> if you improve the recipe. More workers, more ovens, or a smarter technique: any of them lifts how much you make.</p>
-<p>The specific recipe this model uses has a name: the <strong>Cobb-Douglas production function</strong>. It’s the single most-used production function in all of economics, because it captures that “more inputs or better know-how means more output” intuition in one tidy line.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Capital is anything durable that helps you produce but isn’t “used up” in one go. A loaf of bread is output; the oven that baked it is capital.</p></div></div><p>More of any ingredient raises output. So does a better recipe. More workers, more ovens, or a smarter technique: any of them lifts how much you make.</p>
+<p>The specific recipe this model uses is the <strong>Cobb-Douglas production function</strong>, the most-used production function in economics. It captures that “more inputs or better know-how means more output” idea in one line.</p>
 </section>
 <section id="the-recipe-written-down" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="the-recipe-written-down">The recipe, written down</h2>
-<p>Here is the actual formula. Don’t worry about the symbols yet. We’ll translate every one of them into plain words right after.</p>
+<p>Every symbol is translated below.</p>
 <div id="nte-prod" class="callout callout-style-default callout-note callout-titled" title="The Cobb-Douglas production function">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -320,24 +319,23 @@ Y = A \cdot K^{\alpha} \cdot L^{1-\alpha}
 </div>
 <p>Reading it left to right:</p>
 <ul>
-<li><span class="math inline">\(Y\)</span> is <strong>output</strong>, the dish. In our case, the output of the <em>nonfarm business sector</em>, which is the part of the economy that isn’t farms or the government, roughly three-quarters of all U.S. production. It’s where this recipe really earns its keep.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
-<li><span class="math inline">\(A\)</span> is <strong>total factor productivity</strong>, the recipe quality. A bigger <span class="math inline">\(A\)</span> means you squeeze more output from the same workers and machines.</li>
+<li><span class="math inline">\(Y\)</span> is <strong>output</strong>, the dish. Here, the output of the <em>nonfarm business sector</em>: the part of the economy that isn’t farms or the government, roughly three-quarters of all U.S. production.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li><span class="math inline">\(A\)</span> is <strong>total factor productivity</strong>, the recipe quality. A bigger <span class="math inline">\(A\)</span> means more output from the same workers and machines.</li>
 <li><span class="math inline">\(K\)</span> is <strong>capital</strong>, and <span class="math inline">\(L\)</span> is <strong>labor</strong>, the two physical ingredients.</li>
-<li><span class="math inline">\(\alpha\)</span> (the Greek letter “alpha”) is the one piece that needs explaining.</li>
+<li><span class="math inline">\(\alpha\)</span> (the Greek letter “alpha”) needs its own section.</li>
 </ul>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;The model treats the economy as six sectors. Only nonfarm business gets the full Cobb-Douglas recipe; the smaller sectors use simpler rules we’ll meet later.</p></div></div></section>
-<section id="alpha-who-gets-which-slice-of-the-pie" class="level2">
-<h2 class="anchored" data-anchor-id="alpha-who-gets-which-slice-of-the-pie">Alpha: who gets which slice of the pie</h2>
-<p>When a business produces something and sells it, the money it earns gets split. Some of it pays the <em>workers</em>: wages and salaries. The rest goes to the <em>owners of the machines and buildings</em>, the people who put up the capital. That second slice is <strong>capital’s share of income</strong>, and that’s what <span class="math inline">\(\alpha\)</span> measures.</p>
-<p>In U.S. nonfarm business, <span class="math inline">\(\alpha\)</span> is about <span class="math inline">\(0.36\)</span>. In plain terms: out of every dollar the sector earns, roughly 36 cents flows to the owners of capital, and the other 64 cents flows to workers as pay.</p>
-<p>That’s also why the exponents in the formula add up the way they do. Capital is raised to the power <span class="math inline">\(\alpha\)</span> (0.36), and labor is raised to <span class="math inline">\(1 - \alpha\)</span> (0.64). The two exponents are just the two slices of the same pie, so by construction they add to 1.</p>
-<p>Why exponents instead of plain multiplication? Because exponents let each ingredient “matter” in proportion to its slice. Since workers earn the bigger slice, labor moves output a bit more than capital does, dollar for dollar, and the <span class="math inline">\(0.64\)</span> exponent bakes exactly that in.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;The model treats the economy as six sectors. Only nonfarm business gets the full Cobb-Douglas recipe; the smaller sectors use simpler rules covered later.</p></div></div></section>
+<section id="alpha-how-income-splits-between-workers-and-capital" class="level2">
+<h2 class="anchored" data-anchor-id="alpha-how-income-splits-between-workers-and-capital">Alpha: how income splits between workers and capital</h2>
+<p>When a business sells what it produces, the money splits. Some pays the <em>workers</em>: wages and salaries. The rest goes to the <em>owners of the machines and buildings</em>, the people who put up the capital. That second share is <strong>capital’s share of income</strong>. That is what <span class="math inline">\(\alpha\)</span> measures.</p>
+<p>In U.S. nonfarm business, <span class="math inline">\(\alpha\)</span> is about <span class="math inline">\(0.36\)</span>. Out of every dollar the sector earns, roughly 36 cents flows to the owners of capital, and the other 64 cents flows to workers as pay.</p>
+<p>That is why the exponents add up the way they do. Capital is raised to the power <span class="math inline">\(\alpha\)</span> (0.36), and labor is raised to <span class="math inline">\(1 - \alpha\)</span> (0.64). The two exponents are the two shares of the same income, so they add to 1.</p>
+<p>Why exponents instead of plain multiplication? Exponents make each ingredient matter in proportion to its share. Workers earn the bigger share, so labor moves output more than capital does, dollar for dollar. The <span class="math inline">\(0.64\)</span> exponent builds that in.</p>
 </section>
 <section id="more-machines-help-but-less-and-less-each-time" class="level2">
 <h2 class="anchored" data-anchor-id="more-machines-help-but-less-and-less-each-time">More machines help, but less and less each time</h2>
-<p>Here’s a feature of this recipe that matches real life surprisingly well.</p>
-<p>Imagine you give one office worker a second computer monitor. Nice. They can keep email open on one screen and work on the other. Real productivity boost. Now give them a third monitor. Still helpful, but less so. A fourth? Marginal. By the tenth monitor, they’re just decorating the cubicle. Each additional monitor adds <em>something</em>, but each one adds <em>less</em> than the one before.</p>
-<p>Economists call this <strong>diminishing returns</strong>: piling on more and more of one ingredient (here, capital per worker) keeps raising output, but by smaller and smaller amounts. <a href="#fig-cd" class="quarto-xref">Figure&nbsp;1</a> shows exactly this shape: output climbs as you add capital per worker, but the curve flattens as it rises.</p>
+<p>Give one office worker a second computer monitor. They can keep email open on one screen and work on the other. Real productivity boost. A third monitor helps less. A fourth is marginal. By the tenth, they’re decorating the cubicle. Each additional monitor adds <em>something</em>, but less than the one before.</p>
+<p>This is <strong>diminishing returns</strong>: piling on more of one ingredient (here, capital per worker) keeps raising output, but by smaller and smaller amounts. <a href="#fig-cd" class="quarto-xref">Figure&nbsp;1</a> shows the shape: output climbs as you add capital per worker, and the curve flattens as it rises.</p>
 <div id="fig-cd" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -348,26 +346,26 @@ Figure&nbsp;1: More capital per worker raises output, but with diminishing retur
 </figcaption>
 </figure>
 </div>
-<p>Notice the curve bends but never turns downward: more capital is never <em>bad</em>, it just helps less and less. And the value of <span class="math inline">\(\alpha\)</span> controls how sharply it bends: a bigger capital share means capital pulls more weight, so the curve rises higher before it flattens.</p>
+<p>The curve bends but never turns downward: more capital is never <em>bad</em>, it just helps less and less. The value of <span class="math inline">\(\alpha\)</span> controls how sharply it bends: a bigger capital share means capital pulls more weight, so the curve rises higher before it flattens.</p>
 </section>
 <section id="double-everything-and-you-double-output" class="level2">
 <h2 class="anchored" data-anchor-id="double-everything-and-you-double-output">Double everything, and you double output</h2>
-<p>One more clean property. Because the two exponents add up to exactly 1, the recipe has what’s called <strong>constant returns to scale</strong>: if you double <em>every</em> ingredient at once (twice the workers, twice the machines, same know-how) you get exactly twice the output.</p>
-<p>That’s the difference between adding capital <em>per worker</em> (diminishing returns, the flattening curve) and scaling the <em>whole operation</em> up evenly (constant returns, output just doubles). Build a second identical bakery next door, fully staffed and equipped, and you bake twice as much bread. Sensible.</p>
+<p>Because the two exponents add to exactly 1, the recipe has <strong>constant returns to scale</strong>: double <em>every</em> ingredient at once (twice the workers, twice the machines, same know-how) and you get exactly twice the output.</p>
+<p>That is the difference between adding capital <em>per worker</em> (diminishing returns, the flattening curve) and scaling the <em>whole operation</em> up evenly (constant returns, output doubles). Build a second identical bakery next door, fully staffed and equipped, and you bake twice as much bread.</p>
 </section>
 <section id="the-three-ingredients-and-what-potential-means" class="level2">
 <h2 class="anchored" data-anchor-id="the-three-ingredients-and-what-potential-means">The three ingredients, and what “potential” means</h2>
-<p>The recipe needs three numbers fed into it, and each one gets its own page coming up:</p>
+<p>The recipe needs three numbers, each measured on its own page:</p>
 <ul>
 <li><strong>Labor</strong>: total worker hours (page 4).</li>
-<li><strong>Capital services</strong>: how much productive muscle the machines and buildings provide (page 5).</li>
+<li><strong>Capital services</strong>: how much productive work the machines and buildings provide (page 5).</li>
 <li><strong>TFP</strong>: the recipe quality, the leftover know-how (page 6).</li>
 </ul>
-<p>But remember the whole point: we’re not building <em>actual</em> output, we already have that. We’re building <strong>potential</strong> output, the economy’s sustainable top speed. So the model feeds the recipe the <em>potential</em> version of each ingredient: potential hours (what people would work at full employment), potential capital, and potential TFP (the underlying trend, with temporary booms and busts smoothed out). Same recipe, ingredients set to “full health.”</p>
+<p>The point is not to build <em>actual</em> output. We already have that. The point is <strong>potential</strong> output, so the model feeds the recipe the <em>potential</em> version of each ingredient: potential hours (what people would work at full employment), potential capital, and potential TFP (the underlying trend, with temporary booms and busts smoothed out).</p>
 </section>
-<section id="the-recipe-as-the-code-actually-runs-it" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="the-recipe-as-the-code-actually-runs-it">The recipe, as the code actually runs it</h2>
-<p>Here is the exact block from <code>aggregation.py</code> that computes potential nonfarm-business output:</p>
+<section id="the-recipe-as-the-code-runs-it" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-recipe-as-the-code-runs-it">The recipe, as the code runs it</h2>
+<p>The exact block from <code>aggregation.py</code> that computes potential nonfarm-business output:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>kshare <span class="op">=</span> annual[<span class="st">"kshare"</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>log_qgdpnfbfe <span class="op">=</span> (</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    kshare <span class="op">*</span> np.log(icap_lag)</span>
@@ -376,22 +374,22 @@ Figure&nbsp;1: More capital per worker raises output, but with diminishing retur
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> gdpconst</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>qgdpnfbfe <span class="op">=</span> np.exp(log_qgdpnfbfe).rename(<span class="st">"qgdpnfbfe"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>It looks different from the tidy formula in <a href="#nte-prod" class="quarto-xref">Note&nbsp;1</a>, but it’s the very same recipe, just written in <strong>logarithms</strong>. Here’s why anyone would do that.</p>
-<p>A <strong>logarithm</strong> (or “log”) is a math trick with one magical property: it turns multiplication into addition. The log of “<span class="math inline">\(a\)</span> times <span class="math inline">\(b\)</span>” equals “log of <span class="math inline">\(a\)</span>” plus “log of <span class="math inline">\(b\)</span>.” So a recipe written as a chain of <em>multiplications</em> becomes a chain of simple <em>additions</em>, which is faster and steadier for a computer to handle. It’s like preferring to add up a grocery bill rather than multiply everything together in your head.</p>
-<p>Watch the formula <span class="math inline">\(Y = A \cdot K^{\alpha} \cdot L^{1-\alpha}\)</span> turn into the code, line by line:</p>
+<p>It looks different from the formula in <a href="#nte-prod" class="quarto-xref">Note&nbsp;1</a>, but it is the same recipe written in <strong>logarithms</strong>.</p>
+<p>A <strong>logarithm</strong> (or “log”) has one property that matters here: it turns multiplication into addition. The log of “<span class="math inline">\(a\)</span> times <span class="math inline">\(b\)</span>” equals “log of <span class="math inline">\(a\)</span>” plus “log of <span class="math inline">\(b\)</span>.” A recipe written as a chain of <em>multiplications</em> becomes a chain of <em>additions</em>, which is faster and steadier for a computer.</p>
+<p>The formula <span class="math inline">\(Y = A \cdot K^{\alpha} \cdot L^{1-\alpha}\)</span> maps to the code line by line:</p>
 <ul>
 <li><code>kshare</code> is <span class="math inline">\(\alpha\)</span>, capital’s share (0.36).</li>
-<li><code>icap_lag</code> is the capital <span class="math inline">\(K\)</span>, last year’s capital services, since this year’s production runs on machines that were already in place.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
+<li><code>icap_lag</code> is the capital <span class="math inline">\(K\)</span>: last year’s capital services, since this year’s production runs on machines that were already in place.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
 <li><code>ilabfe</code> is potential labor <span class="math inline">\(L\)</span>, the potential worker-hours.</li>
 <li><code>iprodfe</code> is potential TFP <span class="math inline">\(A\)</span>, the potential recipe quality.</li>
-<li><code>gdpconst</code> is a fixed constant that simply pins down the units, so the index lands on the right scale (2009 dollars).</li>
+<li><code>gdpconst</code> is a fixed constant that pins down the units, so the index lands on the right scale (2009 dollars).</li>
 </ul>
-<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;The capital is “lagged” by one year: you produce in 2016 using the factories and equipment that existed at the end of 2015.</p></div></div><p>The first line, <code>kshare * np.log(icap_lag)</code>, is the log of <span class="math inline">\(K^{\alpha}\)</span>. The second, <code>(1 - kshare) * np.log(ilabfe)</code>, is the log of <span class="math inline">\(L^{1-\alpha}\)</span>. The third, <code>np.log(...iprodfe)</code>, is the log of <span class="math inline">\(A\)</span>. The code <em>adds</em> them because, in log world, adding is what multiplying becomes. Finally <code>np.exp(...)</code> is the “undo” button: it reverses the logarithm and hands back the plain output number, <code>qgdpnfbfe</code>: potential nonfarm-business output.</p>
-<p>So the scary-looking code is nothing more than <span class="math inline">\(Y = A \cdot K^{\alpha} \cdot L^{1-\alpha}\)</span>, fed the <em>potential</em> version of each ingredient, and run through logs for the computer’s convenience.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;The capital is “lagged” by one year: you produce in 2016 using the factories and equipment that existed at the end of 2015.</p></div></div><p>The first line, <code>kshare * np.log(icap_lag)</code>, is the log of <span class="math inline">\(K^{\alpha}\)</span>. The second, <code>(1 - kshare) * np.log(ilabfe)</code>, is the log of <span class="math inline">\(L^{1-\alpha}\)</span>. The third, <code>np.log(...iprodfe)</code>, is the log of <span class="math inline">\(A\)</span>. The code <em>adds</em> them because in logs, adding is what multiplying becomes. <code>np.exp(...)</code> reverses the logarithm and hands back the plain output number, <code>qgdpnfbfe</code>: potential nonfarm-business output.</p>
+<p>The code is <span class="math inline">\(Y = A \cdot K^{\alpha} \cdot L^{1-\alpha}\)</span>, fed the <em>potential</em> version of each ingredient, run through logs for the computer’s convenience.</p>
 </section>
-<section id="up-next" class="level2">
-<h2 class="anchored" data-anchor-id="up-next">Up next</h2>
-<p>We have the engine. Now we need to fill its tank, to actually measure each ingredient, at its “potential” setting. We’ll start with the one humans care about most: labor.</p>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<p>Each input has to be measured at its potential level. Labor first.</p>
 
 
 <script type="ojs-module-contents">

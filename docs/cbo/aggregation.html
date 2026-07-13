@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Putting It Together: From Ingredients to Potential GDP – Macroeconomic Theory</title>
+<title>Putting It Together: From Inputs to Potential GDP – Macroeconomic Theory</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -151,7 +151,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/aggregation.html">Putting It Together: From Ingredients to Potential GDP</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/aggregation.html">Putting It Together: From Inputs to Potential GDP</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -194,7 +194,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/production-function.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Production Function: the Economy’s Engine</span></a>
+ <span class="menu-text">The Production Function</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -212,13 +212,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/tfp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Total Factor Productivity: the Leftover That Runs the Show</span></a>
+ <span class="menu-text">Total Factor Productivity: the Leftover</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/aggregation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Putting It Together: From Ingredients to Potential GDP</span></a>
+ <span class="menu-text">Putting It Together: From Inputs to Potential GDP</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -263,9 +263,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/aggregation.html">Putting It Together: From Ingredients to Potential GDP</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cbo/index.html">The CBO Potential Output Model</a></li><li class="breadcrumb-item"><a href="../cbo/aggregation.html">Putting It Together: From Inputs to Potential GDP</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Putting It Together: From Ingredients to Potential GDP</h1>
+<h1 class="title">Putting It Together: From Inputs to Potential GDP</h1>
 </div>
 
 
@@ -284,58 +284,56 @@ window.Quarto = {
 
 <section id="from-parts-to-a-whole" class="level2">
 <h2 class="anchored" data-anchor-id="from-parts-to-a-whole">From parts to a whole</h2>
-<p>For the last few pages we have been building ingredients. We measured how many hours people can sustainably work (labor), how hard the economy’s machines and buildings are working (capital services), and the leftover know-how that lets the same workers and machines produce more over time (total factor productivity, or TFP). Each one was its own number, sitting in its own file.</p>
-<p>Now we cook. This page is where the ingredients go into the pot and come out as a single dish: <strong>potential GDP</strong>, the dollar value of everything the economy <em>could</em> produce at full, sustainable use of its workers and machines.</p>
-<p>Think of it like a recipe. We have flour, eggs, and sugar measured out. The recipe tells us how to combine them, and the oven turns them into a cake. Our “recipe” is the production function, and our final cake is one number per year for the whole U.S. economy.</p>
+<p>The pieces are built: potential labor (how many hours people can sustainably work), potential capital services (how hard the machines and buildings are working), and potential TFP (the leftover know-how that lets the same workers and machines produce more over time). Each is its own number, sitting in its own file.</p>
+<p>This page combines them into a single number: <strong>potential GDP</strong>, the dollar value of everything the economy <em>could</em> produce at full, sustainable use of its workers and machines.</p>
 </section>
-<section id="the-engine-one-more-time" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="the-engine-one-more-time">The engine, one more time</h2>
-<p>The biggest chunk of the economy (about three-quarters of it) is the <strong>nonfarm business</strong> sector.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> This is the part that runs on the full engine you met a few pages back. We plug in three things (potential labor, potential capital, and potential TFP) and the engine hands us potential output for that sector.</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Nonfarm business, or NFB, is basically every private company that isn’t a farm: factories, stores, banks, software firms, restaurants. It is where most of the action is.</p></div></div><p>That engine has a name, the <strong>Cobb-Douglas production function</strong>, and it looks like this:</p>
-<div id="nte-cobb-douglas" class="callout callout-style-default callout-note callout-titled" title="The production function (the engine)">
+<section id="nonfarm-business-first" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="nonfarm-business-first">Nonfarm business first</h2>
+<p>The biggest chunk of the economy (about three-quarters of it) is the <strong>nonfarm business</strong> sector.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> This sector gets the full <strong>Cobb-Douglas production function</strong>. Plug in potential labor, potential capital, and potential TFP; out comes potential output for the sector.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Nonfarm business, or NFB, is every private company that isn’t a farm: factories, stores, banks, software firms, restaurants.</p></div></div><div id="nte-cobb-douglas" class="callout callout-style-default callout-note callout-titled" title="The production function">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note&nbsp;1: The production function (the engine)
+Note&nbsp;1: The production function
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Potential nonfarm-business output is the technology level <span class="math inline">\(A\)</span> times capital <span class="math inline">\(K\)</span> and labor <span class="math inline">\(L\)</span>, each raised to a power that reflects how big a role it plays: <span class="math display">\[
 Y = A \, K^{\alpha} \, L^{1-\alpha}
-\]</span> Here <span class="math inline">\(\alpha\)</span> (about <span class="math inline">\(0.36\)</span> in the U.S.) is capital’s share of income, so <span class="math inline">\(1-\alpha\)</span> (about <span class="math inline">\(0.64\)</span>) is labor’s share. The two powers add up to one, which is just a way of saying “if you double <em>both</em> workers and machines, you double output.”</p>
+\]</span> Here <span class="math inline">\(\alpha\)</span> (about <span class="math inline">\(0.36\)</span> in the U.S.) is capital’s share of income, so <span class="math inline">\(1-\alpha\)</span> (about <span class="math inline">\(0.64\)</span>) is labor’s share. The two powers add up to one, which says: double <em>both</em> workers and machines, and you double output.</p>
 </div>
 </div>
-<p>In the code, this same equation is written in <strong>logarithms</strong>, a trick that turns the multiplications and powers into plain additions, which computers and statisticians both prefer.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Here is the actual line, copied from <code>aggregation.py</code>:</p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;A logarithm answers “how many times do I multiply to get this number?” Working in logs turns “<span class="math inline">\(A\)</span> times <span class="math inline">\(K^\alpha\)</span> times <span class="math inline">\(L^{1-\alpha}\)</span>” into “log A plus alpha times log K plus…”: addition instead of multiplication. At the end we undo the log with <span class="math inline">\(e^x\)</span> (<code>np.exp</code>) to get back to dollars.</p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>log_qgdpnfbfe <span class="op">=</span> (</span>
+<p>In the code, the same equation is written in <strong>logarithms</strong>, which turn the multiplications and powers into plain additions.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> The actual lines, copied from <code>aggregation.py</code>:</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;A logarithm answers “how many times do I multiply to get this number?” Working in logs turns “<span class="math inline">\(A\)</span> times <span class="math inline">\(K^\alpha\)</span> times <span class="math inline">\(L^{1-\alpha}\)</span>” into “log A plus alpha times log K plus…”: addition instead of multiplication. At the end, <span class="math inline">\(e^x\)</span> (<code>np.exp</code>) undoes the log and returns to dollars.</p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>log_qgdpnfbfe <span class="op">=</span> (</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    kshare <span class="op">*</span> np.log(icap_lag)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> kshare) <span class="op">*</span> np.log(ilabfe)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> np.log(annual_potentials[<span class="st">"iprodfe"</span>])</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> gdpconst</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>qgdpnfbfe <span class="op">=</span> np.exp(log_qgdpnfbfe).rename(<span class="st">"qgdpnfbfe"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Read it in plain English: take capital’s share (<code>kshare</code>, that is <span class="math inline">\(\alpha\)</span>) times log capital (<code>icap_lag</code>), add labor’s share (<code>1 - kshare</code>) times log labor (<code>ilabfe</code>), add log TFP (<code>iprodfe</code>), add a constant that just fixes the units, and undo the log. Out pops <code>qgdpnfbfe</code>, potential nonfarm-business output. The <code>fe</code> on the end is the model’s tag for “full employment,” its shorthand for <em>potential</em>.</p>
+<p>In plain English: take capital’s share (<code>kshare</code>, that is <span class="math inline">\(\alpha\)</span>) times log capital (<code>icap_lag</code>), add labor’s share (<code>1 - kshare</code>) times log labor (<code>ilabfe</code>), add log TFP (<code>iprodfe</code>), add a constant that fixes the units, and undo the log. Out comes <code>qgdpnfbfe</code>, potential nonfarm-business output. The <code>fe</code> suffix is the model’s tag for “full employment,” its shorthand for <em>potential</em>.</p>
 </section>
 <section id="the-other-sectors-take-a-simpler-path" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="the-other-sectors-take-a-simpler-path">The other sectors take a simpler path</h2>
-<p>The rest of the economy (the other quarter) does not get the full engine. There are four leftover pieces: <strong>farms</strong>, <strong>households</strong> (which here mostly means the value of living in a home you own), <strong>nonprofits</strong>, and <strong>government</strong> (federal and state-and-local).</p>
-<p>For most of these, potential output is computed the simple way: potential hours times potential productivity.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> No capital, no TFP, no powers, just how many hours people work and how much each hour produces.</p>
-<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Productivity here just means “output per hour of work.” If a worker can produce 50 dollars of stuff per hour and works a billion hours, that’s 50 billion dollars of output. Hours times productivity.</p></div></div><p>Housing is the one exception, and it is a fun one. You do not “work hours” to live in your own house. The house itself does the producing, like a tool you own rather than rent. So for housing the model uses the <em>return on the housing stock</em>: the value the home throws off each year, scaled by how much housing there is. It is the one place in the whole model where capital, not labor, is doing the work.</p>
+<p>The rest of the economy (the other quarter) has four pieces: <strong>farms</strong>, <strong>households</strong> (which here mostly means the value of living in a home you own), <strong>nonprofits</strong>, and <strong>government</strong> (federal and state-and-local).</p>
+<p>For most of these, potential output is potential hours times potential productivity.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> No capital, no TFP, no powers.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Productivity here means “output per hour of work.” If a worker produces 50 dollars of stuff per hour and works a billion hours, that’s 50 billion dollars of output.</p></div></div><p>Housing is the exception. You do not “work hours” to live in your own house. The house itself does the producing. For housing the model uses the <em>return on the housing stock</em>: the value the home throws off each year, scaled by how much housing there is. It is the one place in the model where capital, not labor, does the work.</p>
 </section>
 <section id="aggregation-why-you-cant-just-add-dollars" class="level2">
 <h2 class="anchored" data-anchor-id="aggregation-why-you-cant-just-add-dollars">Aggregation: why you can’t just add dollars</h2>
-<p>Now we have a number for each sector. The obvious move is to add them up. <strong>Aggregation</strong> is exactly that: combining the sectors into one economy-wide total.</p>
-<p>But here is the catch, and it is the heart of this page. You cannot simply add up “real” dollars across sectors. <strong>Real</strong> means inflation-adjusted: dollars stripped of price changes so you are measuring actual <em>stuff</em>, not just bigger price tags. The trouble is that different sectors have wildly different price trends. Computers get cheaper every year; haircuts and houses get more expensive. So a “2009 dollar” of computers and a “2009 dollar” of haircuts are not really the same kind of dollar, and naively summing them gives a misleading total.</p>
-<p>So how do the official statisticians handle it? With something called the <strong>Fisher index</strong>.</p>
+<p>Each sector now has a number. <strong>Aggregation</strong> combines them into one economy-wide total.</p>
+<p>You cannot simply add up “real” dollars across sectors. <strong>Real</strong> means inflation-adjusted: dollars stripped of price changes so you are measuring actual <em>stuff</em>, not bigger price tags. The trouble is that different sectors have wildly different price trends. Computers get cheaper every year; haircuts and houses get more expensive. A “2009 dollar” of computers and a “2009 dollar” of haircuts are not the same kind of dollar, and naively summing them gives a misleading total.</p>
+<p>The official statisticians handle it with the <strong>Fisher index</strong>.</p>
 </section>
 <section id="the-fisher-index-a-fair-average" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="the-fisher-index-a-fair-average">The Fisher index: a fair average</h2>
-<p>Imagine you want to combine fast-growing computer output with slow-growing food output into one “total output” number. You need to weight them by price, but <em>which year’s prices</em>?</p>
-<p>If you weight by <strong>old prices</strong> (computers were absurdly expensive back then), computers dominate the weights and their fast growth gets <em>overstated</em>. Statisticians call this the <strong>Laspeyres</strong> way.</p>
-<p>If you weight by <strong>new prices</strong> (computers are cheap now), computers barely count and their growth gets <em>understated</em>. That is the <strong>Paasche</strong> way.</p>
-<p>Both are reasonable. Both are biased, in opposite directions. So the Fisher index does the obvious fair thing: it splits the difference by taking the <strong>geometric mean</strong> of the two.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> One estimate leans high, the other leans low, and averaging them cancels most of the bias, like asking two people who always over- and under-guess and meeting in the middle.</p>
-<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;A geometric mean is like a regular average, but for things that multiply: you multiply the numbers and take the square root. For growth rates, it is the honest way to average. If one estimate is too high and the other too low, the geometric mean lands sensibly in between and the two biases largely cancel.</p></div></div><div id="nte-fisher" class="callout callout-style-default callout-note callout-titled" title="The Fisher index">
+<p>To combine fast-growing computer output with slow-growing food output into one total, you weight them by price. But <em>which year’s prices</em>?</p>
+<p>Weight by <strong>old prices</strong> (computers were absurdly expensive back then), and computers dominate the weights: their fast growth gets <em>overstated</em>. Statisticians call this the <strong>Laspeyres</strong> way.</p>
+<p>Weight by <strong>new prices</strong> (computers are cheap now), and computers barely count: their growth gets <em>understated</em>. That is the <strong>Paasche</strong> way.</p>
+<p>Both are reasonable. Both are biased, in opposite directions. The Fisher index splits the difference by taking the <strong>geometric mean</strong> of the two.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> One estimate leans high, the other leans low, and averaging cancels most of the bias: like asking two people who always over- and under-guess and meeting in the middle.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;A geometric mean is an average for things that multiply: multiply the numbers and take the square root. For growth rates, it is the honest way to average.</p></div></div><div id="nte-fisher" class="callout callout-style-default callout-note callout-titled" title="The Fisher index">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -350,45 +348,45 @@ Note&nbsp;2: The Fisher index
 \]</span> This is the exact method the <strong>BEA</strong> (the Bureau of Economic Analysis, the government agency that measures official GDP) uses to add up the national accounts. CBO uses it too, so its potential GDP is an apples-to-apples match with the BEA’s actual GDP.</p>
 </div>
 </div>
-<p>In the code, that “fair average” is literally a square root. Here it is, verbatim from <code>fisher.py</code>:</p>
+<p>In the code, the fair average is literally a square root. Verbatim from <code>fisher.py</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Step 3: Fisher indices ──</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Fisher = geometric mean of Laspeyres and Paasche</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>fisher_q <span class="op">=</span> np.sqrt(laspeyres_q_gross <span class="op">*</span> paasche_q)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>fisher_p <span class="op">=</span> np.sqrt(laspeyres_p_gross <span class="op">*</span> paasche_p)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="the-payoff-picture" class="level2">
-<h2 class="anchored" data-anchor-id="the-payoff-picture">The payoff picture</h2>
-<p>Before we write down the final total, let’s look at what all this machinery actually buys us. <a href="#fig-contrib" class="quarto-xref">Figure&nbsp;1</a> breaks potential nonfarm-business growth into its three ingredients (labor, capital, and TFP) and shows how much each one added in different eras. This is the picture that ties together everything from the last few pages.</p>
+<section id="what-the-decomposition-shows" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-decomposition-shows">What the decomposition shows</h2>
+<p><a href="#fig-contrib" class="quarto-xref">Figure&nbsp;1</a> breaks potential nonfarm-business growth into its three inputs (labor, capital, and TFP) and shows how much each added in different eras. This picture ties the last three pages together.</p>
 <div id="fig-contrib" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-contrib-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/contributions.png" class="img-fluid figure-img" style="width:88.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-contrib-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: How much each ingredient (labor, capital, and TFP) adds to potential nonfarm-business growth, by era.
+Figure&nbsp;1: How much each input (labor, capital, and TFP) adds to potential nonfarm-business growth, by era.
 </figcaption>
 </figure>
 </div>
-<p>Each bar is a stretch of history, and the colored segments stack up to that era’s total potential growth. A few things jump out. In the <strong>Golden Age</strong> (1950-1973) all three ingredients were generous, and TFP alone (the pure “we got smarter” piece) contributed nearly 1.9 percentage points a year. The total potential growth back then was about 4% a year, which is fast.</p>
-<p>Then look at the right-hand bars. After 2007, <em>all three</em> segments shrink at once. Labor growth slows as the workforce ages, capital deepening cools off, and TFP growth drops to under 1 point a year. Stacked together, potential growth falls to roughly 1.65% a year, about two-fifths of the Golden Age pace. The slump isn’t one bad ingredient; it is a little less of everything.</p>
+<p>Each bar is a stretch of history, and the colored segments stack up to that era’s total potential growth. In the <strong>Golden Age</strong> (1950-1973) all three inputs were generous, and TFP alone (the pure “we got smarter” piece) contributed nearly 1.9 percentage points a year. Total potential growth was about 4% a year.</p>
+<p>After 2007, <em>all three</em> segments shrink at once. Labor growth slows as the workforce ages, capital deepening cools off, and TFP growth drops to under 1 point a year. Stacked together, potential growth falls to roughly 1.65% a year, about two-fifths of the Golden Age pace. The slump isn’t one bad input. It is a little less of everything.</p>
 </section>
 <section id="the-final-total" class="level2">
 <h2 class="anchored" data-anchor-id="the-final-total">The final total</h2>
-<p>With the picture in mind, the last step is short. We take the nonfarm-business output from the engine and add the other sectors. In the code the headline line reads:</p>
+<p>The last step is short. Take the nonfarm-business output and add the other sectors. The headline line in the code:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gdpfe <span class="op">=</span> (gdpnfbfe <span class="op">+</span> gdpgfe <span class="op">+</span> sectoral_potentials[<span class="st">"gdpaffe"</span>] <span class="op">+</span> gdpsvhfe).rename(<span class="st">"gdpfe"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>That is potential GDP in plain <em>nominal</em> (current-price) dollars: nonfarm business plus government plus farms plus household-and-nonprofit. Adding nominal dollars is fine, because nominal dollars are all in the same year’s prices already.</p>
-<p>For the <em>real</em> (inflation-adjusted) total, we use the Fisher index instead of plain addition. That is the <code>fisher_aggregate_with_residual</code> call below. And then there is one last friendly tweak:</p>
+<p>That is potential GDP in <em>nominal</em> (current-price) dollars: nonfarm business plus government plus farms plus household-and-nonprofit. Adding nominal dollars is fine, because nominal dollars are all in the same year’s prices already.</p>
+<p>For the <em>real</em> (inflation-adjusted) total, the model uses the Fisher index instead of plain addition. That is the <code>fisher_aggregate_with_residual</code> call:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>qgdpfe, pgdpfe <span class="op">=</span> fisher_aggregate_with_residual(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    nominal_all, real_all, price_all,</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    residual<span class="op">=</span>smoothed_residuals.get(<span class="st">"qgdp_resfe"</span>),</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    sample_start<span class="op">=</span>sample_start, sample_end<span class="op">=</span>sample_end,</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Notice the <code>residual=...</code> part. Because Fisher aggregation rebuilds the total from sub-pieces, our sum can land a hair away from the BEA’s official definition of GDP. So the model adds back a tiny, pre-smoothed correction (the <strong>Fisher residual</strong>) so that our potential total lines up exactly with how the official statisticians draw the GDP boundary. It is a small nudge, nothing more, but it is what keeps the model honest against the published numbers.</p>
+<p>Note the <code>residual=...</code> argument. Because Fisher aggregation rebuilds the total from sub-pieces, the sum can land a hair away from the BEA’s official definition of GDP. The model adds back a tiny, pre-smoothed correction (the <strong>Fisher residual</strong>) so the potential total lines up exactly with how the official statisticians draw the GDP boundary. A small correction that keeps the model consistent with the published numbers.</p>
 </section>
 <section id="what-we-have-and-whats-next" class="level2">
 <h2 class="anchored" data-anchor-id="what-we-have-and-whats-next">What we have, and what’s next</h2>
-<p>And that’s the dish out of the oven. We now have <code>qgdpfe</code> (one number for each year, real potential GDP in 2009 dollars) assembled from labor, capital, and TFP, glued together the same way the BEA glues actual GDP. We can trace it all the way back through history.</p>
-<p>But every number so far has been <em>historical</em>: what the economy could have produced from 1949 to today. The obvious question is the one a forecaster actually cares about: how does this model say anything about the <strong>future</strong>? That turns out to hinge on a single fork in the road, and it is where we go next.</p>
+<p><code>qgdpfe</code>: one number for each year, real potential GDP in 2009 dollars, assembled from labor, capital, and TFP, combined the same way the BEA combines actual GDP.</p>
+<p>Every number so far is <em>historical</em>: what the economy could have produced from 1949 to today. How the model says anything about the <strong>future</strong> is the next page.</p>
 
 
 <script type="ojs-module-contents">

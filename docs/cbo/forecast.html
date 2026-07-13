@@ -165,7 +165,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/production-function.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Production Function: the Economy’s Engine</span></a>
+ <span class="menu-text">The Production Function</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -183,13 +183,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/tfp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Total Factor Productivity: the Leftover That Runs the Show</span></a>
+ <span class="menu-text">Total Factor Productivity: the Leftover</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/aggregation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Putting It Together: From Ingredients to Potential GDP</span></a>
+ <span class="menu-text">Putting It Together: From Inputs to Potential GDP</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -255,9 +255,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="the-forecast-was-hiding-in-plain-sight" class="level2">
 <h2 class="anchored" data-anchor-id="the-forecast-was-hiding-in-plain-sight">The forecast was hiding in plain sight</h2>
-<p>On the last few pages we built up potential GDP piece by piece: labor, capital, and the productivity leftover called TFP. Everything we did was about <em>history</em>: what the economy could have produced from 1949 up through the most recent data.</p>
-<p>So where does the <em>forecast</em> come from? You might expect a separate crystal ball, some extra model that takes over once history runs out. There isn’t one.</p>
-<p>Remember those smooth trend lines we drew through the bumpy historical data? To make a forecast, the model just keeps drawing the same line past the edge of the data. That’s it.</p>
+<p>Everything so far is <em>history</em>: what the economy could have produced from 1949 up through the most recent data.</p>
+<p>Where does the <em>forecast</em> come from? There is no separate forecasting model. The smooth trend lines fitted through the bumpy historical data get extended past the edge of the data. That is the forecast.</p>
 <div id="nte-extrapolation" class="callout callout-style-default callout-note callout-titled" title="Extrapolation">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -268,20 +267,20 @@ Note&nbsp;1: Extrapolation
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Extrapolation</strong> means continuing a pattern past the data you actually have. If your height grew about two inches a year and you want to guess next year’s height, you draw the same slope one year further. The forecast in this model is exactly that: the historical trend lines, extended forward.</p>
+<p><strong>Extrapolation</strong> means continuing a pattern past the data you actually have. The forecast in this model is exactly that: the historical trend lines, extended forward.</p>
 </div>
 </div>
-<p>So when CBO “forecasts” potential TFP or potential employment for years where the data is thin or missing, it is really just trusting the slope it already measured and walking it forward. The trend that <em>smooths</em> history is the same trend that <em>predicts</em> the future.</p>
+<p>When CBO “forecasts” potential TFP or potential employment for years where the data is thin or missing, it is trusting the slope it already measured and walking it forward. The trend that <em>smooths</em> history is the same trend that <em>predicts</em> the future.</p>
 </section>
 <section id="the-fork-we-added-trust-cbo-or-speak-for-yourself" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="the-fork-we-added-trust-cbo-or-speak-for-yourself">The fork we added: trust CBO, or speak for yourself</h2>
-<p>That raises an obvious teaching question. What if you don’t believe CBO’s extended trend? Maybe you think American productivity will stay sluggish, or that an aging population will drag down how fast the workforce grows. The published model gives you no knob to turn.</p>
-<div class="page-columns page-full"><p>So we added one. Think of it like a fork in a road. For each of two key series, TFP (the productivity leftover) and employment (how many people are working), you reach a boundary year and choose a path:</p><div class="no-row-height column-margin column-container"><span class="">The default boundary is the first quarter of 2010, written <code>2010Q1</code> in the code. Everything before it is real historical estimation and never changes.</span></div></div>
+<p>What if you don’t believe CBO’s extended trend? Maybe you think American productivity will stay sluggish, or that an aging population will drag down how fast the workforce grows. The published model gives you no way to say so.</p>
+<div class="page-columns page-full"><p>We added one. It is a fork in a road. For each of two key series, TFP (the productivity leftover) and employment (how many people are working), you reach a boundary year and choose a path:</p><div class="no-row-height column-margin column-container"><span class="">The default boundary is the first quarter of 2010, written <code>2010Q1</code> in the code. Everything before it is real historical estimation and never changes.</span></div></div>
 <ul>
 <li><strong><code>"cbo"</code></strong>: keep going straight. Trust CBO’s extended trend exactly as before.</li>
 <li><strong><code>"user"</code></strong>: take the off-ramp. Splice in <em>your own</em> assumed future trend instead (for example, “assume TFP grows only 0.5% per year from here on”).</li>
 </ul>
-<p>The two forks are set independently, so you can second-guess productivity while still trusting CBO on jobs, or the other way around.</p>
+<p>The two forks are set independently. You can second-guess productivity while trusting CBO on jobs, or the other way around.</p>
 <div id="nte-splice" class="callout callout-style-default callout-note callout-titled" title="Splice">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -292,14 +291,14 @@ Note&nbsp;2: Splice
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A <strong>splice</strong> joins your assumed future onto the real historical estimate at the boundary year. Picture two pieces of rope tied together so there’s no gap: we keep CBO’s rope up to the boundary, then attach your rope from the boundary onward, tied to the <em>last real value</em> so the line never jumps. The history before the seam stays byte-for-byte identical to CBO’s.</p>
+<p>A <strong>splice</strong> joins your assumed future onto the real historical estimate at the boundary year: CBO’s estimate is kept up to the boundary, and your path is attached from the boundary onward, anchored to the <em>last real value</em> so the line never jumps. The history before the seam stays byte-for-byte identical to CBO’s.</p>
 </div>
 </div>
 </section>
 <section id="growing-your-assumption-one-quarter-at-a-time" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="growing-your-assumption-one-quarter-at-a-time">Growing your assumption, one quarter at a time</h2>
-<div class="page-columns page-full"><p>Say you tell the model “assume TFP grows 0.5% per year from 2010 on.” The code grabs the last real value just before the boundary (the <em>anchor</em>) and grows it forward, quarter by quarter, at your rate. Because the data is quarterly, a yearly rate gets converted into the equivalent quarterly nudge before it’s applied (one year is four quarters, so the quarterly step is the fourth root of the annual growth).</p><div class="no-row-height column-margin column-container"><span class="">Turning 0.5% per year into a quarterly step: <code>(1 + 0.5/100) ** 0.25 - 1</code>. Compounding that four times gets you back to 0.5% over the full year.</span></div></div>
-<p>Here is the heart of it, copied straight from <code>forecast.py</code>. The loop walks across the projection window, and each quarter is just the previous quarter nudged up by your growth rate:</p>
+<div class="page-columns page-full"><p>Tell the model “assume TFP grows 0.5% per year from 2010 on.” The code grabs the last real value just before the boundary (the <em>anchor</em>) and grows it forward, quarter by quarter, at your rate. The data is quarterly, so a yearly rate is converted to the equivalent quarterly step first (one year is four quarters, so the quarterly step is the fourth root of the annual growth).</p><div class="no-row-height column-margin column-container"><span class="">Turning 0.5% per year into a quarterly step: <code>(1 + 0.5/100) ** 0.25 - 1</code>. Compounding that four times gets back to 0.5% over the full year.</span></div></div>
+<p>The heart of it, copied from <code>forecast.py</code>. The loop walks across the projection window, and each quarter is the previous quarter grown by your rate:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> splice_growth(cbo_series, growth_annual_pct, boundary):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    boundary_p, window <span class="op">=</span> _projection_window(cbo_series.index, boundary)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    anchor <span class="op">=</span> boundary_p <span class="op">-</span> <span class="dv">1</span></span>
@@ -318,11 +317,11 @@ Note&nbsp;2: Splice
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        out.loc[q] <span class="op">=</span> out.loc[prev] <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> q_growth)</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        prev <span class="op">=</span> q</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Read it like a recipe. Start at the <code>anchor</code> (the last real value). For each quarter <code>q</code> in the window, take the previous quarter <code>out.loc[prev]</code>, multiply by <code>(1 + q_growth)</code>, and store the result. Then slide forward: this quarter becomes the <code>prev</code> for the next. By anchoring to the last real value, the spliced path starts exactly where history left off, so there’s no jump at the seam.</p>
+<p>Start at the <code>anchor</code> (the last real value). For each quarter <code>q</code> in the window, take the previous quarter <code>out.loc[prev]</code>, multiply by <code>(1 + q_growth)</code>, and store the result. This quarter becomes the <code>prev</code> for the next. Anchoring to the last real value means the spliced path starts exactly where history left off. No jump at the seam.</p>
 </section>
-<section id="the-off-switch-is-the-whole-point" class="level2">
-<h2 class="anchored" data-anchor-id="the-off-switch-is-the-whole-point">The “off switch” is the whole point</h2>
-<p>Now here’s the part that makes this safe to ship. The override only ever runs if you <em>ask</em> for it. In TFP’s case, that decision lives in one tiny function in <code>tfp.py</code>:</p>
+<section id="the-default-is-untouched" class="level2">
+<h2 class="anchored" data-anchor-id="the-default-is-untouched">The default is untouched</h2>
+<p>The override only runs if you ask for it. For TFP, that decision is one small function in <code>tfp.py</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> project_potential_tfp(iprodfe_cbo, forecast_mode, user_trend_file,</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                          forecast_start):</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> forecast_mode <span class="op">==</span> <span class="st">"cbo"</span>:</span>
@@ -334,15 +333,14 @@ Note&nbsp;2: Splice
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="ss">f"TFP_FORECAST_MODE must be 'cbo' or 'user', got </span><span class="sc">{</span>forecast_mode<span class="sc">!r}</span><span class="ss">"</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Look at the first two lines of the body. In <code>"cbo"</code> mode the function hands back <code>iprodfe_cbo</code>, the trend path, completely untouched and <em>immediately returns</em>. The splicing code below never even runs.</p>
-<p>That is why the default model still reproduces CBO’s published numbers exactly. The “what if” machinery is there, but in plain CBO mode it’s like a light switch left in the off position: present, wired up, drawing no power. You only flip it on when you want to.</p>
+<p>The first two lines of the body: in <code>"cbo"</code> mode the function hands back <code>iprodfe_cbo</code>, the trend path, untouched, and <em>returns immediately</em>. The splicing code never runs. That is why the default model reproduces CBO’s published numbers exactly.</p>
 </section>
 <section id="same-history-four-different-futures" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="same-history-four-different-futures">Same history, four different futures</h2>
-<div class="page-columns page-full"><p><a href="#fig-scen" class="quarto-xref">Figure&nbsp;1</a> shows what happens when you do flip it on. It overlays four runs of the full model: the same engine, fed different assumptions.</p><div class="no-row-height column-margin column-container"><span class="">The four shipped scenarios: <code>cbo</code> (trust both trends), <code>lowtfp</code> (0.5%/yr TFP), <code>lowemp</code> (0.3%/yr employment), and <code>lowboth</code> (both headwinds at once).</span></div></div>
-<p>Notice the shape. Through 2009, all four lines sit <em>exactly on top of each other</em>. You can’t tell them apart, because before the boundary every scenario is the identical CBO history. Then, right at 2010, they fan out like fingers spreading from a fist.</p>
-<p>One path assumes weaker productivity. Another assumes a slower-growing labor force. A third assumes <em>both</em> headwinds at once. Each pessimistic assumption bends the future a little lower, and together they pull average potential-GDP growth over 2010-2016 from about <strong>1.5% per year</strong> (the CBO trend) down toward about <strong>1.1% per year</strong> in the gloomiest scenario.</p>
-<p>To make that concrete: 1.5% versus 1.1% sounds tiny, but it’s the difference between an economy that roughly doubles in size every 47 years and one that takes about 63. Compounded over a working lifetime, that’s a noticeably poorer country.</p>
+<div class="page-columns page-full"><p><a href="#fig-scen" class="quarto-xref">Figure&nbsp;1</a> overlays four runs of the full model, fed different assumptions.</p><div class="no-row-height column-margin column-container"><span class="">The four shipped scenarios: <code>cbo</code> (trust both trends), <code>lowtfp</code> (0.5%/yr TFP), <code>lowemp</code> (0.3%/yr employment), and <code>lowboth</code> (both headwinds at once).</span></div></div>
+<p>Through 2009, all four lines sit <em>exactly on top of each other</em>, because before the boundary every scenario is the identical CBO history. At 2010, they fan out.</p>
+<p>One path assumes weaker productivity. Another assumes a slower-growing labor force. A third assumes <em>both</em> headwinds at once. Each pessimistic assumption bends the future lower, and together they pull average potential-GDP growth over 2010-2016 from about <strong>1.5% per year</strong> (the CBO trend) down toward about <strong>1.1% per year</strong> in the gloomiest scenario.</p>
+<p>1.5% versus 1.1% sounds tiny. It is the difference between an economy that doubles in size every 47 years and one that takes about 63. Compounded over a working lifetime, that is a noticeably poorer country.</p>
 <div id="fig-scen" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-scen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -356,20 +354,17 @@ Figure&nbsp;1: Same history, different futures: the scenarios are identical unti
 </section>
 <section id="try-your-own-assumption" class="level2">
 <h2 class="anchored" data-anchor-id="try-your-own-assumption">Try your own assumption</h2>
-<p>You don’t have to take our scenarios. Writing your own is meant to be a few lines in a spreadsheet. The model reads a small CSV: a plain table with a date column and <strong>exactly one</strong> value column:</p>
+<p>You don’t have to take our scenarios. The model reads a small CSV: a date column and <strong>exactly one</strong> value column:</p>
 <ul>
 <li>a <strong><code>quarter</code></strong> column, like <code>2010Q1</code> (a bare year like <code>2012</code> is automatically expanded to all four of its quarters), and</li>
 <li><em>either</em> a <strong><code>growth_annual_pct</code></strong> column (your assumed yearly growth rate, in percent) <em>or</em> a <strong><code>level</code></strong> column (the actual value you want to pin), but never both.</li>
 </ul>
-<p>Any quarters you leave out simply inherit the last value you gave, so a single row is enough to set a flat assumption for the entire future. The shipped TFP example is two lines long:</p>
+<p>Quarters you leave out inherit the last value you gave, so a single row sets a flat assumption for the entire future. The shipped TFP example is two lines:</p>
 <pre><code>quarter,growth_annual_pct
 2010Q1,0.5</code></pre>
-<p>That one row says: <em>from 2010 on, assume potential productivity grows just 0.5% per year</em>, below CBO’s extended trend. Change the <code>0.5</code> to your own number, rerun, and the model rebuilds the whole future around your guess.</p>
-</section>
-<section id="a-sandbox-for-the-future" class="level2">
-<h2 class="anchored" data-anchor-id="a-sandbox-for-the-future">A sandbox for the future</h2>
-<p>This is what turns the project from a finished report into a playground. The hard part (translating CBO’s machinery faithfully) is done and locked. On top of it you now have a single knob for asking grown-up questions about America’s economic future: <em>What if the productivity slowdown is permanent? What if an aging country keeps the labor force flat?</em> You change one number and watch potential GDP respond.</p>
-<p>But a sandbox is only worth playing in if the foundation is solid. A model is only trustworthy if it actually reproduces what it claims to, and that’s precisely the promise we make good on next, where we check the Python against CBO’s own published numbers, cell by cell.</p>
+<p>That row says: <em>from 2010 on, assume potential productivity grows 0.5% per year</em>, below CBO’s extended trend. Change the <code>0.5</code>, rerun, and the model rebuilds the whole future around your number.</p>
+<p>The point: the model answers “what if” questions about America’s growth. <em>What if the productivity slowdown is permanent? What if an aging country keeps the labor force flat?</em> Change one number and watch potential GDP respond.</p>
+<p>None of this matters unless the model actually reproduces what it claims to. That check, against CBO’s own published numbers, cell by cell, is the last page.</p>
 
 
 <script type="ojs-module-contents">

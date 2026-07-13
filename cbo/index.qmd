@@ -5,45 +5,41 @@ reference-location: margin
 order: 1
 ---
 
-## What number is this page about?
+## The question
 
-Here is a question that sounds simple but turns out to be one of the most important numbers in all of economics: if the U.S. economy were humming along at a healthy, sustainable pace (not overheating, not stuck in a slump), how much stuff could it actually make in a year?
+If the U.S. economy were running at a healthy, sustainable pace (not overheating, not stuck in a slump), how much could it produce in a year?
 
 Not how much it *did* make. How much it *could* make if nearly everyone who wanted a job had one and the country's factories, computers, and machines were being used at a comfortable, can-keep-this-up-forever rate.
 
-That "could make" number has a name: **potential output**, also called **potential GDP**. GDP just means the total dollar value of everything the country produces in a year.^[GDP stands for "gross domestic product." Think of it as the economy's annual scoreboard.] So potential GDP is the economy's *cruising speed*: the pace it can hold without the engine either sputtering or redlining.
+That "could make" number has a name: **potential output**, also called **potential GDP**. GDP is the total dollar value of everything the country produces in a year.^[GDP stands for "gross domestic product."] Potential GDP is the economy's *cruising speed*: the pace it can hold without the engine either sputtering or redlining.
 
-Lots of powerful people care about this number. When the economy is producing *less* than its potential, it usually means workers are sitting idle and machines are gathering dust: a recession. The Federal Reserve might cut interest rates and Congress might pass a stimulus bill to close that gap.^[The Federal Reserve is the central bank of the United States. One of its main jobs is steering the economy by raising or lowering interest rates.] When the economy is producing *more* than its potential, it is running hot, and prices tend to climb. That is inflation. So this one number quietly shapes interest rates, tax-and-spending bills, and a lot of newspaper headlines.
+This number has consequences. When the economy is producing *less* than its potential, workers are sitting idle and machines are gathering dust: a recession. The Federal Reserve might cut interest rates and Congress might pass a stimulus bill to close that gap.^[The Federal Reserve is the central bank of the United States. One of its main jobs is steering the economy by raising or lowering interest rates.] When the economy is producing *more* than its potential, it is running hot, and prices climb. That is inflation. This one number shapes interest rates, tax-and-spending bills, and a lot of newspaper headlines.
 
 ## How far above or below cruising speed are we?
 
-The distance between what the economy actually produced and what it potentially could have produced is called the **output gap**. When actual output dips below potential, the gap is negative: the economy is leaving stuff on the table.
+The distance between what the economy actually produced and what it could have produced is the **output gap**. When actual output dips below potential, the gap is negative: the economy is leaving output on the table.
 
-@fig-hook shows the idea. Most of the time, actual U.S. output rides close to its potential, like a car holding the speed limit. But every so often it drops sharply below. Those dips are recessions. The deepest one on the chart is the 2008 financial crisis, where actual output fell several percent below potential and stayed there for years.
+@fig-hook shows it. Most of the time, actual U.S. output rides close to its potential, like a car holding the speed limit. Every so often it drops sharply below. Those drops are recessions. The deepest on the chart is the 2008 financial crisis, where actual output fell several percent below potential and stayed there for years.
 
 ![Actual U.S. output spends most of its time close to potential, but falls visibly below in recessions.](images/output_gap.png){#fig-hook width=90%}
 
-## What are these pages, exactly?
+## What these pages are
 
-This set of pages is a guided tour of a *real* model: the actual tool the **Congressional Budget Office (CBO)** uses to estimate potential GDP for the United States.^[The CBO is a nonpartisan agency that works for Congress. Its main job is to "score" bills, to estimate what proposed laws will cost and how they will affect the economy and the budget. Nonpartisan means it does not take sides between political parties.]{.column-margin}
+These pages explain a *real* model: the tool the **Congressional Budget Office (CBO)** uses to estimate potential GDP for the United States.^[The CBO is a nonpartisan agency that works for Congress. Its main job is to "score" bills, to estimate what proposed laws will cost and how they will affect the economy and the budget. Nonpartisan means it does not take sides between political parties.]{.column-margin}
 
-The CBO originally wrote this model in a specialized statistics program called EViews. We translated it, piece by piece, into Python, a much more common and readable programming language. So what you are touring is not a textbook toy. It is the real machinery, just rewritten in a language more people can follow.
+The CBO wrote its model in a specialized statistics program called EViews. We translated it, piece by piece, into Python, a more common and readable language. This is not a textbook toy. It is the real machinery, rewritten in a language more people can follow.
 
-Here is the promise of this tour: **the words carry the story.** Each page leads with plain-English intuition and everyday analogies. We will *show* you snippets of the actual Python code so the explanations feel concrete and you can see that there is no hand-waving. But you never have to write or even read code to follow along. If you skipped every gray code box, the story would still make complete sense.
+The words carry the argument. Each page starts with the economics in plain English, then shows the actual Python code that does the work. You never have to write or read code to follow along. Skip every gray code box and you lose nothing.
 
-## The roadmap
+## The pages, in order
 
-The model is a kind of recipe: take some ingredients (workers, machines, know-how), combine them in a specific way, and out comes potential GDP. The eight pages below walk through that recipe one ingredient at a time, in order. Each page picks up where the last one left off.
+1. [**Potential output and the output gap**](potential-output.qmd): what the number means and why policymakers watch it.
+2. [**The production function**](production-function.qmd): the formula that turns labor, capital, and know-how into output.
+3. [**Labor inputs**](labor.qmd): how many people work, for how many hours, and what "potential" employment means.
+4. [**Capital services**](capital.qmd): why capital is weighted by rental cost instead of summed in dollars.
+5. [**Total factor productivity**](tfp.qmd): the part of output that workers and machines cannot explain.
+6. [**Aggregation**](aggregation.qmd): combining the sectors into one potential GDP number.
+7. [**The forecast fork**](forecast.qmd): CBO's trend extrapolation, or assumptions you supply.
+8. [**Verification**](verification.qmd): the Python matches the CBO's published numbers.
 
-1. [**Potential output and the output gap**](potential-output.qmd): the big idea, slowly: what "cruising speed" really means and why the gap matters.
-2. [**The production function**](production-function.qmd): the economy's engine: the formula that turns inputs into output.
-3. [**Labor inputs**](labor.qmd): counting the work: how many people, working how many hours, and what "potential" employment means.
-4. [**Capital services**](capital.qmd): counting the machines: why a fast-aging laptop and a long-lasting building can't just be added together.
-5. [**Total factor productivity**](tfp.qmd): the leftover: the part of output that better ideas and know-how explain, not workers or machines.
-6. [**Aggregation**](aggregation.qmd): assembling the dish: gluing all the sectors of the economy together into one potential GDP number.
-7. [**The forecast fork**](forecast.qmd): looking ahead: how the model projects the future, and how you can swap in your own assumptions.
-8. [**Verification**](verification.qmd): checking our work: how we know the Python really matches the CBO's official numbers.
-
-## Ready?
-
-That's the whole journey. No prior economics, no coding, just curiosity. Start with [page 1](potential-output.qmd), where we slow down and really get a feel for what potential output is.
+Start with [potential output](potential-output.qmd).

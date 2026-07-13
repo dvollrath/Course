@@ -165,7 +165,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/production-function.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Production Function: the Economy’s Engine</span></a>
+ <span class="menu-text">The Production Function</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -183,13 +183,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/tfp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Total Factor Productivity: the Leftover That Runs the Show</span></a>
+ <span class="menu-text">Total Factor Productivity: the Leftover</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cbo/aggregation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Putting It Together: From Ingredients to Potential GDP</span></a>
+ <span class="menu-text">Putting It Together: From Inputs to Potential GDP</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -253,15 +253,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="why-we-have-to-prove-ourselves" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="why-we-have-to-prove-ourselves">Why we have to prove ourselves</h2>
-<p>In the last page you got to play forecaster, nudging future productivity and employment up or down and watching potential GDP respond. That only matters if the machine doing the responding is actually built right. So this final page is about trust.</p>
-<p>Here’s the situation. The Congressional Budget Office (the nonpartisan agency that estimates how much the U.S. economy <em>could</em> produce) wrote its real model in a specialized statistics language called EViews.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Everything you have seen on this site is a <em>rewrite</em> of that model into Python, line by line.</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;EViews is a commercial program built for economists working with time series. It is powerful, but it is not something most people have on their laptop, and you cannot easily read or run it for free.</p></div></div><p>Whenever you translate something (a recipe from grandma’s handwriting, a book from French to English, a model from one language to another) you can introduce mistakes. A misread number. A step in the wrong order. So before we ask you to believe anything this model says, we owe you a demonstration that the translation is faithful.</p>
+<section id="the-claim-to-check" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-claim-to-check">The claim to check</h2>
+<p>The Congressional Budget Office wrote its model in a specialized statistics language called EViews.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Everything on this site is a <em>rewrite</em> of that model into Python, line by line.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;EViews is a commercial program built for economists working with time series. It is powerful, but most people don’t have it, and you cannot easily read or run it for free.</p></div></div><p>Translation introduces mistakes: a misread number, a step in the wrong order. This page shows the translation is faithful.</p>
 </section>
-<section id="replication-cooking-the-dish-and-tasting-it-against-the-original" class="level2">
-<h2 class="anchored" data-anchor-id="replication-cooking-the-dish-and-tasting-it-against-the-original">Replication: cooking the dish and tasting it against the original</h2>
-<p>The trick is simple, and it is the same trick scientists use everywhere.</p>
+<section id="replication" class="level2">
+<h2 class="anchored" data-anchor-id="replication">Replication</h2>
+<p>The check is the one scientists use everywhere.</p>
 <div id="nte-replication" class="callout callout-style-default callout-note callout-titled" title="Replication (verification)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -272,11 +271,10 @@ Note&nbsp;1: Replication (verification)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Replication</strong> means reproducing a result that is <em>already known to be correct</em> using your own method. If your method spits out the known answer, you have strong evidence your method is sound. If it doesn’t, you have a bug to find.</p>
+<p><strong>Replication</strong> means reproducing a result that is <em>already known to be correct</em> using your own method. If your method produces the known answer, you have strong evidence your method is sound. If it doesn’t, you have a bug to find.</p>
 </div>
 </div>
-<p>Think of it like a recipe. Suppose a famous chef publishes a photo of their finished cake along with the ingredient list. You follow the ingredient list in your own kitchen. If your cake comes out looking exactly like the photo, you can be pretty confident you followed the recipe correctly. If it comes out flat and purple, something went wrong.</p>
-<p>We need a “photo of the finished cake” to compare against: a set of trusted numbers we did not produce ourselves.</p>
+<p>Replication needs a set of trusted numbers we did not produce ourselves.</p>
 <div id="nte-benchmark" class="callout callout-style-default callout-note callout-titled" title="Benchmark">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -290,13 +288,13 @@ Note&nbsp;2: Benchmark
 <p>A <strong>benchmark</strong> is the trusted reference you measure yourself against. Here, the benchmark is the <strong>CBO’s own published table of historical growth rates</strong>: numbers the CBO printed in the documentation that ships with their official program. They are the answer key.</p>
 </div>
 </div>
-<p>So the benchmark is the CBO’s answer key. The replication is running our Python and checking our answers, cell by cell, against it.</p>
+<p>The benchmark is the CBO’s answer key. The replication is running our Python and checking our answers, cell by cell, against it.</p>
 </section>
 <section id="what-the-answer-key-looks-like" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="what-the-answer-key-looks-like">What the answer key looks like</h2>
-<p>The CBO’s table describes how fast the economy’s <em>potential</em> grew during different chapters of American history. Each <strong>row</strong> is a different thing being measured: potential output itself, the potential labor force, potential hours worked, capital services, total factor productivity (the “leftover” efficiency term from earlier pages), and so on. Each <strong>column</strong> is a stretch of history: the postwar boom of 1950-1973, the slowdown of the 1970s, the 1990s tech boom, and so on, all the way to a final column for the whole 1950-2016 span.</p>
-<p>Put together, that’s 14 rows across 7 columns, exactly <strong>98 numbers</strong> in total. Our job is to land on all 98.</p>
-<p>Here are three of those rows. The values are growth rates in percent per year. Read “3.98” as “grew about 3.98% every year, on average, during that period”, which, compounded over a couple of decades, roughly <em>doubles</em> the size of that piece of the economy.</p>
+<p>The CBO’s table reports how fast the economy’s <em>potential</em> grew during different stretches of American history. Each <strong>row</strong> is a different quantity: potential output itself, the potential labor force, potential hours worked, capital services, total factor productivity, and so on. Each <strong>column</strong> is a stretch of history: the postwar boom of 1950-1973, the slowdown of the 1970s, the 1990s tech boom, out to a final column for the whole 1950-2016 span.</p>
+<p>That’s 14 rows across 7 columns: exactly <strong>98 numbers</strong>. Our job is to land on all 98.</p>
+<p>Three of those rows. The values are growth rates in percent per year. Read “3.98” as “grew about 3.98% every year, on average, during that period.” Compounded over a couple of decades, that roughly <em>doubles</em> the size of that piece of the economy.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
@@ -343,11 +341,11 @@ Note&nbsp;2: Benchmark
 </tr>
 </tbody>
 </table>
-<div class="page-columns page-full"><p>Every one of those numbers is <em>both</em> what our Python computed <em>and</em> what the CBO published. They are the same to two decimals. </p><div class="no-row-height column-margin column-container"><span class="">You can read the economic story in these rows: potential output growth fades from a brisk ~4% in the golden age to under 1.5% in the slow recovery after 2008.</span></div></div>
+<div class="page-columns page-full"><p>Every one of those numbers is <em>both</em> what our Python computed <em>and</em> what the CBO published. They are the same to two decimals. </p><div class="no-row-height column-margin column-container"><span class="">The economic story is in these rows too: potential output growth fades from a brisk ~4% in the golden age to under 1.5% in the slow recovery after 2008.</span></div></div>
 </section>
 <section id="how-the-check-works-in-code" class="level2">
 <h2 class="anchored" data-anchor-id="how-the-check-works-in-code">How the check works in code</h2>
-<p>Inside the model, one file does nothing but build that table and hold it up against the CBO’s answer key. The answer key is stored literally in the code: a Python dictionary called <code>TARGET</code>, where each entry is one row of the CBO’s published numbers:</p>
+<p>One file does nothing but build that table and hold it up against the CBO’s answer key. The answer key is stored literally in the code: a Python dictionary called <code>TARGET</code>, where each entry is one row of the CBO’s published numbers:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CBO README values, used only for diagnostic comparison.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>TARGET <span class="op">=</span> {</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Potential Output"</span>:        [<span class="fl">3.98</span>, <span class="fl">3.16</span>, <span class="fl">3.42</span>, <span class="fl">3.26</span>, <span class="fl">2.40</span>, <span class="fl">1.45</span>, <span class="fl">3.21</span>],</span>
@@ -355,7 +353,7 @@ Note&nbsp;2: Benchmark
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Potential LF Productivity"</span>:[<span class="fl">2.37</span>, <span class="fl">0.64</span>, <span class="fl">1.71</span>, <span class="fl">2.01</span>, <span class="fl">1.42</span>, <span class="fl">0.91</span>, <span class="fl">1.73</span>],</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    ...</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Then a short function lines up <em>our</em> number next to <em>their</em> number for every cell and subtracts one from the other. The subtraction is the whole point: a difference of zero means a perfect match.</p>
+<p>A short function lines up <em>our</em> number next to <em>their</em> number for every cell and subtracts:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compare_to_target(table):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    columns <span class="op">=</span> <span class="bu">list</span>(table.columns)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    rows <span class="op">=</span> []</span>
@@ -365,17 +363,17 @@ Note&nbsp;2: Benchmark
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> table.loc[name].values</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        diff <span class="op">=</span> model <span class="op">-</span> np.array(target)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>In plain English: for each row name, grab the model’s row of values, grab the CBO’s row of values, and compute <code>diff = model − target</code>. That <code>diff</code> is the gap between us and the answer key for every cell. If the model is faithful, every <code>diff</code> should be essentially zero.</p>
+<p>For each row name, grab the model’s values, grab the CBO’s values, and compute <code>diff = model − target</code>. That <code>diff</code> is the gap between us and the answer key for every cell. If the model is faithful, every <code>diff</code> is essentially zero.</p>
 </section>
 <section id="the-verdict" class="level2">
 <h2 class="anchored" data-anchor-id="the-verdict">The verdict</h2>
-<p>It is. Across all 98 cells:</p>
+<p>Across all 98 cells:</p>
 <ul>
 <li>The <strong>worst</strong> single cell is off by <strong>0.013 percentage points</strong>.</li>
 <li>The <strong>average</strong> miss is <strong>0.003 percentage points</strong>.</li>
 </ul>
-<p>To feel how small that is: a growth rate of 3.21% versus 3.20% is a difference of 0.01, about the size of our <em>worst</em> error. On a $20-trillion economy, the typical gap between our number and the CBO’s is far thinner than the rounding you would do by hand. For all practical purposes, the two models are identical.</p>
-<p><a href="#fig-ver" class="quarto-xref">Figure&nbsp;1</a> shows this in one picture. Each dot is one cell of the table. The horizontal position is the CBO’s published value; the vertical position is our Python value. The diagonal line is the line of <em>perfect agreement</em>. Any dot landing on it means “our number equals theirs exactly.” Every single dot sits on the line.</p>
+<p>For scale: a growth rate of 3.21% versus 3.20% is a difference of 0.01, about the size of our <em>worst</em> error. On a $20-trillion economy, the typical gap between our number and the CBO’s is far thinner than the rounding you would do by hand. For practical purposes, the two models are identical.</p>
+<p><a href="#fig-ver" class="quarto-xref">Figure&nbsp;1</a> shows it in one picture. Each dot is one cell of the table. The horizontal position is the CBO’s published value; the vertical position is our Python value. The diagonal line is perfect agreement: a dot on it means “our number equals theirs exactly.” Every dot sits on the line.</p>
 <div id="fig-ver" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ver-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -387,17 +385,17 @@ Figure&nbsp;1: Every cell of the CBO’s published growth table, our Python valu
 </figure>
 </div>
 </section>
-<section id="why-it-isnt-perfectly-zero" class="level2 page-columns page-full">
+<section id="why-it-isnt-perfectly-zero" class="level2">
 <h2 class="anchored" data-anchor-id="why-it-isnt-perfectly-zero">Why it isn’t <em>perfectly</em> zero</h2>
-<p>Honesty matters here, so let’s be clear about that 0.013. We did not hit the answer key dead-on in every cell, and we should not expect to.</p>
-<p>Two harmless things create those hairline gaps. First, <strong>rounding</strong>: the CBO published its table rounded to two decimals, and rounding always loses a sliver of precision. Second, and more interesting, EViews and Python don’t always do the exact same arithmetic deep inside certain steps, especially the <strong>smoothing filter</strong>, a tool the model uses to draw a smooth trend line through bumpy data.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Different software can trace a very slightly different smooth line, and that tiny difference ripples forward into the final growth rates.</p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;A smoothing filter is like running your finger along a jagged mountain range to trace the overall ridgeline. It ignores the little jagged peaks to find the underlying shape. Two programs can trace slightly different ridgelines from the same mountains.</p></div></div><p>That is the entire source of the discrepancy. There is no hidden disagreement about <em>how the economy works</em>: only the kind of microscopic numerical dust you get any time two different programs grind through the same long calculation. “Matches” here honestly means <em>agrees to three-thousandths of a percentage point on average</em>, not <em>bit-for-bit identical</em>, and that is exactly the right standard for a faithful translation.</p>
+<p>We did not hit the answer key dead-on in every cell, and we should not expect to.</p>
+<p>Two harmless things create the hairline gaps. First, <strong>rounding</strong>: the CBO published its table rounded to two decimals, and rounding loses a sliver of precision. Second, EViews and Python don’t do the exact same arithmetic deep inside certain steps, especially the <strong>smoothing filter</strong>, a tool the model uses to draw a smooth trend line through bumpy data. Two programs can draw very slightly different smooth lines from the same data, and that tiny difference ripples forward into the final growth rates.</p>
+<p>That is the entire source of the discrepancy. There is no hidden disagreement about <em>how the economy works</em>, only tiny numerical differences from two programs grinding through the same long calculation. “Matches” here means <em>agrees to three-thousandths of a percentage point on average</em>, not <em>bit-for-bit identical</em>. That is the right standard for a faithful translation.</p>
 </section>
-<section id="the-end-of-the-tour" class="level2">
-<h2 class="anchored" data-anchor-id="the-end-of-the-tour">The end of the tour</h2>
-<p>That closes the loop. We started this whole tour with a deceptively simple question (<em>how much could the U.S. economy produce if it were running at full health?</em>) and we answered it by building an engine: a production function fed by labor, by capital weighted to its rental cost, and by the leftover efficiency term we called TFP, all aggregated up into a single number for potential GDP, with a forecast that you yourself can steer.</p>
-<p>And now you know it isn’t a black box you have to take on faith. It reproduces the CBO’s own published answer key to within a rounding error, cell by cell across seventy years of history.</p>
-<p>So go back to the forecast page and break it. Push productivity down, imagine an older, slower-growing workforce, and watch the economy’s ceiling bend. Every number it gives you is computed by the same verified machine you just watched pass its final exam.</p>
+<section id="where-this-leaves-you" class="level2">
+<h2 class="anchored" data-anchor-id="where-this-leaves-you">Where this leaves you</h2>
+<p>The question these pages started with: how much could the U.S. economy produce if it were running at full health? The answer is built from a production function fed by labor, by capital weighted to its rental cost, and by the TFP leftover, aggregated into a single number for potential GDP, with a forecast you can steer.</p>
+<p>It is not a black box you have to take on faith. It reproduces the CBO’s published answer key to within a rounding error, cell by cell, across seventy years of history.</p>
+<p>Go back to the <a href="../cbo/forecast.html">forecast page</a> and break it. Push productivity down, assume an older, slower-growing workforce, and watch the economy’s ceiling bend. Every number it gives you comes from the same model that just reproduced the CBO’s answer key.</p>
 
 
 <script type="ojs-module-contents">
